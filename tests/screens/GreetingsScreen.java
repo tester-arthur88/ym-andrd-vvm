@@ -116,7 +116,7 @@ public class GreetingsScreen {
 
         driver.findElement(recordButtonLocator).click();
         System.out.println("Greeting: recording started");
-        Thread.sleep(8000);
+        Thread.sleep(4000);
         driver.findElement(recordButtonLocator).click();
         System.out.println("Greeting: recording finished");
 
