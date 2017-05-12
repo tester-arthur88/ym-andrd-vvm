@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="YouMail - Android History Tests">
+    <test name="History: Call entry" preserve-order="true">
+        <classes>
+            <class name="tests.HistoryTest">
+                <methods>
+                    <include name="openEntry"></include>
+                    <include name="callEntry"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="History: Text entry" preserve-order="true">
+        <classes>
+            <class name="tests.HistoryTest">
+                <methods>
+                    <include name="openEntry"></include>
+                    <include name="textEntry"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="History: Forward entry" preserve-order="true">
+        <classes>
+            <class name="tests.HistoryTest">
+                <methods>
+                    <include name="openEntry"></include>
+                    <include name="forwardEntry"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="History: Ditch entry" preserve-order="true">
+        <classes>
+            <class name="tests.HistoryTest">
+                <methods>
+                    <include name="openEntry"></include>
+                    <include name="ditchEntry"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

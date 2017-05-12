@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [YouMail - Android History Tests]">
+  <test name="History: Call entry(failed)">
+    <classes>
+      <class name="tests.HistoryTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="callEntry"/>
+        </methods>
+      </class> <!-- tests.HistoryTest -->
+    </classes>
+  </test> <!-- History: Call entry(failed) -->
+</suite> <!-- Failed suite [YouMail - Android History Tests] -->

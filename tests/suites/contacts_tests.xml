@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="YouMail - Android Contacts Tests">
+    <test name="Contacts: Call contact">
+        <classes>
+            <class name="tests.ContactsTest">
+                <methods>
+                    <include name="openContacts"></include>
+                    <include name="openTargetContact"></include>
+                    <include name="callContact"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

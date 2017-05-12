@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [YouMail - Android Messages Tests]">
+  <test name="Messages: Play message(failed)">
+    <classes>
+      <class name="tests.MessagesTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="playMessage"/>
+        </methods>
+      </class> <!-- tests.MessagesTest -->
+    </classes>
+  </test> <!-- Messages: Play message(failed) -->
+</suite> <!-- Failed suite [YouMail - Android Messages Tests] -->

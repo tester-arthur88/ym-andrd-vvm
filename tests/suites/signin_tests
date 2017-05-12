@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="YouMail - Android Sign In Tests">
+    <test name="Sign In" preserve-order="true">
+        <classes>
+            <class name="tests.SignInTest">
+                <methods>
+                    <include name="signInPositive"></include>
+                    <include name="waitForContactUpload"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

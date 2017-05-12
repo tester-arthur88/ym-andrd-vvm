@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="81" total="120" passed="38">
+  <reporter-output>
+  </reporter-output>
+  <suite name="YouMail - Android Contacts Tests" duration-ms="63037" started-at="2017-05-12T00:04:30Z" finished-at="2017-05-12T00:05:33Z">
+    <groups>
+    </groups>
+    <test name="Contacts: Call contact" duration-ms="63037" started-at="2017-05-12T00:04:30Z" finished-at="2017-05-12T00:05:33Z">
+      <class name="tests.ContactsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.ContactsTest@17f6480]" name="setUp" is-config="true" duration-ms="24775" started-at="2017-05-11T17:04:30Z" finished-at="2017-05-11T17:04:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openContacts()[pri:0, instance:tests.ContactsTest@17f6480]" name="openContacts" duration-ms="31046" started-at="2017-05-11T17:04:55Z" finished-at="2017-05-11T17:05:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openContacts -->
+        <test-method status="PASS" signature="openTargetContact()[pri:0, instance:tests.ContactsTest@17f6480]" name="openTargetContact" duration-ms="396" started-at="2017-05-11T17:05:26Z" finished-at="2017-05-11T17:05:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTargetContact -->
+        <test-method status="PASS" signature="callContact()[pri:0, instance:tests.ContactsTest@17f6480]" name="callContact" duration-ms="5287" started-at="2017-05-11T17:05:27Z" finished-at="2017-05-11T17:05:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- callContact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ContactsTest@17f6480]" name="tearDown" is-config="true" duration-ms="1533" started-at="2017-05-11T17:05:32Z" finished-at="2017-05-11T17:05:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ContactsTest -->
+    </test> <!-- Contacts: Call contact -->
+  </suite> <!-- YouMail - Android Contacts Tests -->
+  <suite name="YouMail - Android History Tests" duration-ms="296360" started-at="2017-05-11T23:51:22Z" finished-at="2017-05-11T23:56:19Z">
+    <groups>
+    </groups>
+    <test name="History: Call entry" duration-ms="76174" started-at="2017-05-11T23:51:22Z" finished-at="2017-05-11T23:52:39Z">
+      <class name="tests.HistoryTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.HistoryTest@66d33a]" name="setUp" is-config="true" duration-ms="24355" started-at="2017-05-11T16:51:22Z" finished-at="2017-05-11T16:51:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openEntry()[pri:0, instance:tests.HistoryTest@66d33a]" name="openEntry" duration-ms="30902" started-at="2017-05-11T16:51:47Z" finished-at="2017-05-11T16:52:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openEntry -->
+        <test-method status="PASS" signature="callEntry()[pri:0, instance:tests.HistoryTest@66d33a]" name="callEntry" duration-ms="19450" started-at="2017-05-11T16:52:18Z" finished-at="2017-05-11T16:52:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- callEntry -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.HistoryTest@66d33a]" name="tearDown" is-config="true" duration-ms="1465" started-at="2017-05-11T16:52:37Z" finished-at="2017-05-11T16:52:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HistoryTest -->
+    </test> <!-- History: Call entry -->
+    <test name="History: Text entry" duration-ms="59296" started-at="2017-05-11T23:52:39Z" finished-at="2017-05-11T23:53:38Z">
+      <class name="tests.HistoryTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.HistoryTest@3f0ee7cb]" name="setUp" is-config="true" duration-ms="25528" started-at="2017-05-11T16:52:39Z" finished-at="2017-05-11T16:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openEntry()[pri:0, instance:tests.HistoryTest@3f0ee7cb]" name="openEntry" duration-ms="30129" started-at="2017-05-11T16:53:04Z" finished-at="2017-05-11T16:53:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openEntry -->
+        <test-method status="PASS" signature="textEntry()[pri:0, instance:tests.HistoryTest@3f0ee7cb]" name="textEntry" duration-ms="2348" started-at="2017-05-11T16:53:34Z" finished-at="2017-05-11T16:53:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textEntry -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.HistoryTest@3f0ee7cb]" name="tearDown" is-config="true" duration-ms="1289" started-at="2017-05-11T16:53:37Z" finished-at="2017-05-11T16:53:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HistoryTest -->
+    </test> <!-- History: Text entry -->
+    <test name="History: Forward entry" duration-ms="57660" started-at="2017-05-11T23:53:38Z" finished-at="2017-05-11T23:54:36Z">
+      <class name="tests.HistoryTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.HistoryTest@5a39699c]" name="setUp" is-config="true" duration-ms="24086" started-at="2017-05-11T16:53:38Z" finished-at="2017-05-11T16:54:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openEntry()[pri:0, instance:tests.HistoryTest@5a39699c]" name="openEntry" duration-ms="30999" started-at="2017-05-11T16:54:02Z" finished-at="2017-05-11T16:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openEntry -->
+        <test-method status="PASS" signature="forwardEntry()[pri:0, instance:tests.HistoryTest@5a39699c]" name="forwardEntry" duration-ms="1349" started-at="2017-05-11T16:54:33Z" finished-at="2017-05-11T16:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forwardEntry -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.HistoryTest@5a39699c]" name="tearDown" is-config="true" duration-ms="1225" started-at="2017-05-11T16:54:34Z" finished-at="2017-05-11T16:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HistoryTest -->
+    </test> <!-- History: Forward entry -->
+    <test name="History: Ditch entry" duration-ms="103214" started-at="2017-05-11T23:54:36Z" finished-at="2017-05-11T23:56:19Z">
+      <class name="tests.HistoryTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.HistoryTest@1b0375b3]" name="setUp" is-config="true" duration-ms="24063" started-at="2017-05-11T16:54:36Z" finished-at="2017-05-11T16:55:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openEntry()[pri:0, instance:tests.HistoryTest@1b0375b3]" name="openEntry" duration-ms="31338" started-at="2017-05-11T16:55:00Z" finished-at="2017-05-11T16:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openEntry -->
+        <test-method status="PASS" signature="ditchEntry()[pri:0, instance:tests.HistoryTest@1b0375b3]" name="ditchEntry" duration-ms="46507" started-at="2017-05-11T16:55:31Z" finished-at="2017-05-11T16:56:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ditchEntry -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.HistoryTest@1b0375b3]" name="tearDown" is-config="true" duration-ms="1305" started-at="2017-05-11T16:56:17Z" finished-at="2017-05-11T16:56:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HistoryTest -->
+    </test> <!-- History: Ditch entry -->
+  </suite> <!-- YouMail - Android History Tests -->
+  <suite name="YouMail - Android Messages Tests" duration-ms="575717" started-at="2017-05-11T23:41:47Z" finished-at="2017-05-11T23:51:22Z">
+    <groups>
+    </groups>
+    <test name="Messages: Load More messages" duration-ms="49602" started-at="2017-05-11T23:41:47Z" finished-at="2017-05-11T23:42:36Z">
+      <class name="tests.MessagesTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.MessagesTest@2b80d80f]" name="setUp" is-config="true" duration-ms="25015" started-at="2017-05-11T16:41:47Z" finished-at="2017-05-11T16:42:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loadMoreMessages()[pri:0, instance:tests.MessagesTest@2b80d80f]" name="loadMoreMessages" duration-ms="23145" started-at="2017-05-11T16:42:12Z" finished-at="2017-05-11T16:42:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadMoreMessages -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.MessagesTest@2b80d80f]" name="tearDown" is-config="true" duration-ms="1441" started-at="2017-05-11T16:42:35Z" finished-at="2017-05-11T16:42:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MessagesTest -->
+    </test> <!-- Messages: Load More messages -->
+    <test name="Messages: Play message" duration-ms="125705" started-at="2017-05-11T23:42:36Z" finished-at="2017-05-11T23:44:42Z">
+      <class name="tests.MessagesTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.MessagesTest@6ea6d14e]" name="setUp" is-config="true" duration-ms="25046" started-at="2017-05-11T16:42:36Z" finished-at="2017-05-11T16:43:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openMessage()[pri:0, instance:tests.MessagesTest@6ea6d14e]" name="openMessage" duration-ms="53056" started-at="2017-05-11T16:43:01Z" finished-at="2017-05-11T16:43:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMessage -->
+        <test-method status="FAIL" signature="playMessage()[pri:0, instance:tests.MessagesTest@6ea6d14e]" name="playMessage" duration-ms="46254" started-at="2017-05-11T16:43:54Z" finished-at="2017-05-11T16:44:41Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //android.widget.ImageButton[@index='0' and @resource-id='com.youmail.android.vvm:id/pause'] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'TAC-45', ip: '10.3.184.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.youmail.android.vvm, noReset=true, deviceName=Android, platform=ANY, appActivity=com.youmail.android.vvm.activity.Splash, autoLaunch=true, newCommandTimeout=0, platformVersion=7.0, automationName=uiautomator2, full-reset=false, browserName=Android, platformName=Android, autoAcceptAlerts=true}]
+Session ID: 84de3422-0dbe-43e8-8333-0f3a696b8d3e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //android.widget.ImageButton[@index='0' and @resource-id='com.youmail.android.vvm:id/pause'] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'TAC-45', ip: '10.3.184.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.youmail.android.vvm, noReset=true, deviceName=Android, platform=ANY, appActivity=com.youmail.android.vvm.activity.Splash, autoLaunch=true, newCommandTimeout=0, platformVersion=7.0, automationName=uiautomator2, full-reset=false, browserName=Android, platformName=Android, autoAcceptAlerts=true}]
+Session ID: 84de3422-0dbe-43e8-8333-0f3a696b8d3e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at settings.Helper.waitForPresent(Helper.java:28)
+	at screens.MessagesScreen.playMessage(MessagesScreen.java:123)
+	at tests.MessagesTest.playMessage(MessagesTest.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'TAC-45', ip: '10.3.184.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.youmail.android.vvm, noReset=true, deviceName=Android, platform=ANY, appActivity=com.youmail.android.vvm.activity.Splash, autoLaunch=true, newCommandTimeout=0, platformVersion=7.0, automationName=uiautomator2, full-reset=false, browserName=Android, platformName=Android, autoAcceptAlerts=true}]
+Session ID: 84de3422-0dbe-43e8-8333-0f3a696b8d3e
+*** Element info: {Using=xpath, value=//android.widget.ImageButton[@index='0' and @resource-id='com.youmail.android.vvm:id/pause']}
+	at sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- playMessage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.MessagesTest@6ea6d14e]" name="tearDown" is-config="true" duration-ms="1336" started-at="2017-05-11T16:44:41Z" finished-at="2017-05-11T16:44:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MessagesTest -->
+    </test> <!-- Messages: Play message -->
+    <test name="Messages: Call sender" duration-ms="101713" started-at="2017-05-11T23:44:42Z" finished-at="2017-05-11T23:46:24Z">
+      <class name="tests.MessagesTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.MessagesTest@1888ff2c]" name="setUp" is-config="true" duration-ms="24799" started-at="2017-05-11T16:44:42Z" finished-at="2017-05-11T16:45:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openMessage()[pri:0, instance:tests.MessagesTest@1888ff2c]" name="openMessage" duration-ms="54180" started-at="2017-05-11T16:45:07Z" finished-at="2017-05-11T16:46:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMessage -->
+        <test-method status="PASS" signature="callSender()[pri:0, instance:tests.MessagesTest@1888ff2c]" name="callSender" duration-ms="21234" started-at="2017-05-11T16:46:01Z" finished-at="2017-05-11T16:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- callSender -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.MessagesTest@1888ff2c]" name="tearDown" is-config="true" duration-ms="1498" started-at="2017-05-11T16:46:22Z" finished-at="2017-05-11T16:46:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MessagesTest -->
+    </test> <!-- Messages: Call sender -->
+    <test name="Messages: Text sender" duration-ms="82941" started-at="2017-05-11T23:46:24Z" finished-at="2017-05-11T23:47:47Z">
+      <class name="tests.MessagesTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.MessagesTest@256216b3]" name="setUp" is-config="true" duration-ms="25445" started-at="2017-05-11T16:46:24Z" finished-at="2017-05-11T16:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openMessage()[pri:0, instance:tests.MessagesTest@256216b3]" name="openMessage" duration-ms="52056" started-at="2017-05-11T16:46:49Z" finished-at="2017-05-11T16:47:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMessage -->
+        <test-method status="PASS" signature="textSender()[pri:0, instance:tests.MessagesTest@256216b3]" name="textSender" duration-ms="4246" started-at="2017-05-11T16:47:41Z" finished-at="2017-05-11T16:47:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textSender -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.MessagesTest@256216b3]" name="tearDown" is-config="true" duration-ms="1193" started-at="2017-05-11T16:47:45Z" finished-at="2017-05-11T16:47:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MessagesTest -->
+    </test> <!-- Messages: Text sender -->
+    <test name="Messages: Forward message" duration-ms="87265" started-at="2017-05-11T23:47:47Z" finished-at="2017-05-11T23:49:14Z">
+      <class name="tests.MessagesTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.MessagesTest@1b40d5f0]" name="setUp" is-config="true" duration-ms="24820" started-at="2017-05-11T16:47:47Z" finished-at="2017-05-11T16:48:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openMessage()[pri:0, instance:tests.MessagesTest@1b40d5f0]" name="openMessage" duration-ms="52216" started-at="2017-05-11T16:48:11Z" finished-at="2017-05-11T16:49:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMessage -->
+        <test-method status="PASS" signature="forwardMessage()[pri:0, instance:tests.MessagesTest@1b40d5f0]" name="forwardMessage" duration-ms="8833" started-at="2017-05-11T16:49:04Z" finished-at="2017-05-11T16:49:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forwardMessage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.MessagesTest@1b40d5f0]" name="tearDown" is-config="true" duration-ms="1394" started-at="2017-05-11T16:49:13Z" finished-at="2017-05-11T16:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MessagesTest -->
+    </test> <!-- Messages: Forward message -->
+    <test name="Messages: Ditch sender" duration-ms="128464" started-at="2017-05-11T23:49:14Z" finished-at="2017-05-11T23:51:22Z">
+      <class name="tests.MessagesTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.MessagesTest@19bb089b]" name="setUp" is-config="true" duration-ms="24991" started-at="2017-05-11T16:49:14Z" finished-at="2017-05-11T16:49:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openMessage()[pri:0, instance:tests.MessagesTest@19bb089b]" name="openMessage" duration-ms="53810" started-at="2017-05-11T16:49:39Z" finished-at="2017-05-11T16:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMessage -->
+        <test-method status="PASS" signature="ditchSender()[pri:0, instance:tests.MessagesTest@19bb089b]" name="ditchSender" duration-ms="48306" started-at="2017-05-11T16:50:33Z" finished-at="2017-05-11T16:51:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ditchSender -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.MessagesTest@19bb089b]" name="tearDown" is-config="true" duration-ms="1354" started-at="2017-05-11T16:51:21Z" finished-at="2017-05-11T16:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MessagesTest -->
+    </test> <!-- Messages: Ditch sender -->
+  </suite> <!-- YouMail - Android Messages Tests -->
+  <suite name="YouMail - Android Greetings Tests" duration-ms="491696" started-at="2017-05-11T23:56:19Z" finished-at="2017-05-12T00:04:30Z">
+    <groups>
+    </groups>
+    <test name="Greetings: Play greeting" duration-ms="67925" started-at="2017-05-11T23:56:19Z" finished-at="2017-05-11T23:57:27Z">
+      <class name="tests.GreetingsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GreetingsTest@1cd072a9]" name="setUp" is-config="true" duration-ms="24875" started-at="2017-05-11T16:56:19Z" finished-at="2017-05-11T16:56:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openGreetings()[pri:0, instance:tests.GreetingsTest@1cd072a9]" name="openGreetings" duration-ms="30097" started-at="2017-05-11T16:56:44Z" finished-at="2017-05-11T16:57:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGreetings -->
+        <test-method status="PASS" signature="openSmartGreeting()[pri:0, instance:tests.GreetingsTest@1cd072a9]" name="openSmartGreeting" duration-ms="2107" started-at="2017-05-11T16:57:14Z" finished-at="2017-05-11T16:57:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSmartGreeting -->
+        <test-method status="PASS" signature="playGreeting()[pri:0, instance:tests.GreetingsTest@1cd072a9]" name="playGreeting" duration-ms="9328" started-at="2017-05-11T16:57:16Z" finished-at="2017-05-11T16:57:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- playGreeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GreetingsTest@1cd072a9]" name="tearDown" is-config="true" duration-ms="1515" started-at="2017-05-11T16:57:25Z" finished-at="2017-05-11T16:57:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GreetingsTest -->
+    </test> <!-- Greetings: Play greeting -->
+    <test name="Greetings: Record a greeting" duration-ms="128147" started-at="2017-05-11T23:57:27Z" finished-at="2017-05-11T23:59:35Z">
+      <class name="tests.GreetingsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GreetingsTest@7c30a502]" name="setUp" is-config="true" duration-ms="25338" started-at="2017-05-11T16:57:27Z" finished-at="2017-05-11T16:57:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openGreetings()[pri:0, instance:tests.GreetingsTest@7c30a502]" name="openGreetings" duration-ms="29636" started-at="2017-05-11T16:57:52Z" finished-at="2017-05-11T16:58:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGreetings -->
+        <test-method status="PASS" signature="recordGreeting()[pri:0, instance:tests.GreetingsTest@7c30a502]" name="recordGreeting" duration-ms="71940" started-at="2017-05-11T16:58:22Z" finished-at="2017-05-11T16:59:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordGreeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GreetingsTest@7c30a502]" name="tearDown" is-config="true" duration-ms="1232" started-at="2017-05-11T16:59:34Z" finished-at="2017-05-11T16:59:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GreetingsTest -->
+    </test> <!-- Greetings: Record a greeting -->
+    <test name="Greetings: Play recorded greeting" duration-ms="68699" started-at="2017-05-11T23:59:35Z" finished-at="2017-05-12T00:00:44Z">
+      <class name="tests.GreetingsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GreetingsTest@6a5fc7f7]" name="setUp" is-config="true" duration-ms="25028" started-at="2017-05-11T16:59:35Z" finished-at="2017-05-11T17:00:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openGreetings()[pri:0, instance:tests.GreetingsTest@6a5fc7f7]" name="openGreetings" duration-ms="29608" started-at="2017-05-11T17:00:00Z" finished-at="2017-05-11T17:00:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGreetings -->
+        <test-method status="PASS" signature="openTestGreeting()[pri:0, instance:tests.GreetingsTest@6a5fc7f7]" name="openTestGreeting" duration-ms="2860" started-at="2017-05-11T17:00:29Z" finished-at="2017-05-11T17:00:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTestGreeting -->
+        <test-method status="PASS" signature="playGreeting()[pri:0, instance:tests.GreetingsTest@6a5fc7f7]" name="playGreeting" duration-ms="9704" started-at="2017-05-11T17:00:32Z" finished-at="2017-05-11T17:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- playGreeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GreetingsTest@6a5fc7f7]" name="tearDown" is-config="true" duration-ms="1498" started-at="2017-05-11T17:00:42Z" finished-at="2017-05-11T17:00:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GreetingsTest -->
+    </test> <!-- Greetings: Play recorded greeting -->
+    <test name="Greetings: Add contact to a greeting" duration-ms="105917" started-at="2017-05-12T00:00:44Z" finished-at="2017-05-12T00:02:29Z">
+      <class name="tests.GreetingsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GreetingsTest@b684286]" name="setUp" is-config="true" duration-ms="24503" started-at="2017-05-11T17:00:44Z" finished-at="2017-05-11T17:01:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openGreetings()[pri:0, instance:tests.GreetingsTest@b684286]" name="openGreetings" duration-ms="29221" started-at="2017-05-11T17:01:08Z" finished-at="2017-05-11T17:01:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGreetings -->
+        <test-method status="PASS" signature="addContactToGreeting()[pri:0, instance:tests.GreetingsTest@b684286]" name="addContactToGreeting" duration-ms="50874" started-at="2017-05-11T17:01:37Z" finished-at="2017-05-11T17:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addContactToGreeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GreetingsTest@b684286]" name="tearDown" is-config="true" duration-ms="1318" started-at="2017-05-11T17:02:28Z" finished-at="2017-05-11T17:02:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GreetingsTest -->
+    </test> <!-- Greetings: Add contact to a greeting -->
+    <test name="Greetings: Set as a main greeting" duration-ms="61543" started-at="2017-05-12T00:02:29Z" finished-at="2017-05-12T00:03:31Z">
+      <class name="tests.GreetingsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GreetingsTest@511baa65]" name="setUp" is-config="true" duration-ms="26455" started-at="2017-05-11T17:02:29Z" finished-at="2017-05-11T17:02:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openGreetings()[pri:0, instance:tests.GreetingsTest@511baa65]" name="openGreetings" duration-ms="29849" started-at="2017-05-11T17:02:56Z" finished-at="2017-05-11T17:03:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGreetings -->
+        <test-method status="PASS" signature="setAsMainGreeting()[pri:0, instance:tests.GreetingsTest@511baa65]" name="setAsMainGreeting" duration-ms="3943" started-at="2017-05-11T17:03:26Z" finished-at="2017-05-11T17:03:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setAsMainGreeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GreetingsTest@511baa65]" name="tearDown" is-config="true" duration-ms="1293" started-at="2017-05-11T17:03:30Z" finished-at="2017-05-11T17:03:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GreetingsTest -->
+    </test> <!-- Greetings: Set as a main greeting -->
+    <test name="Greetings: Delete recorded greeting" duration-ms="59447" started-at="2017-05-12T00:03:31Z" finished-at="2017-05-12T00:04:30Z">
+      <class name="tests.GreetingsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GreetingsTest@17c68925]" name="setUp" is-config="true" duration-ms="25251" started-at="2017-05-11T17:03:31Z" finished-at="2017-05-11T17:03:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openGreetings()[pri:0, instance:tests.GreetingsTest@17c68925]" name="openGreetings" duration-ms="28663" started-at="2017-05-11T17:03:56Z" finished-at="2017-05-11T17:04:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGreetings -->
+        <test-method status="PASS" signature="openTestGreeting()[pri:0, instance:tests.GreetingsTest@17c68925]" name="openTestGreeting" duration-ms="3068" started-at="2017-05-11T17:04:25Z" finished-at="2017-05-11T17:04:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTestGreeting -->
+        <test-method status="PASS" signature="deleteGreeting()[pri:0, instance:tests.GreetingsTest@17c68925]" name="deleteGreeting" duration-ms="1176" started-at="2017-05-11T17:04:28Z" finished-at="2017-05-11T17:04:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteGreeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GreetingsTest@17c68925]" name="tearDown" is-config="true" duration-ms="1286" started-at="2017-05-11T17:04:29Z" finished-at="2017-05-11T17:04:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GreetingsTest -->
+    </test> <!-- Greetings: Delete recorded greeting -->
+  </suite> <!-- YouMail - Android Greetings Tests -->
+  <suite name="YouMail - Android Sign In Tests" duration-ms="234465" started-at="2017-05-11T23:37:52Z" finished-at="2017-05-11T23:41:47Z">
+    <groups>
+    </groups>
+    <test name="Sign In" duration-ms="234465" started-at="2017-05-11T23:37:52Z" finished-at="2017-05-11T23:41:47Z">
+      <class name="tests.SignInTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.SignInTest@7a92922]" name="setUp" is-config="true" duration-ms="25477" started-at="2017-05-11T16:37:52Z" finished-at="2017-05-11T16:38:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signInPositive()[pri:0, instance:tests.SignInTest@7a92922]" name="signInPositive" duration-ms="62162" started-at="2017-05-11T16:38:18Z" finished-at="2017-05-11T16:39:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInPositive -->
+        <test-method status="PASS" signature="waitForContactUpload()[pri:0, instance:tests.SignInTest@7a92922]" name="waitForContactUpload" duration-ms="145595" started-at="2017-05-11T16:39:20Z" finished-at="2017-05-11T16:41:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForContactUpload -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SignInTest@7a92922]" name="tearDown" is-config="true" duration-ms="1216" started-at="2017-05-11T16:41:45Z" finished-at="2017-05-11T16:41:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SignInTest -->
+    </test> <!-- Sign In -->
+  </suite> <!-- YouMail - Android Sign In Tests -->
+  <suite name="YouMail - Android All Test Suites" duration-ms="0" started-at="2017-05-12T00:05:33Z" finished-at="2017-05-12T00:05:33Z">
+    <groups>
+    </groups>
+  </suite> <!-- YouMail - Android All Test Suites -->
+</testng-results>

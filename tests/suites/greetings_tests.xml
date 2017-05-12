@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="YouMail - Android Greetings Tests">
+    <test name="Greetings: Play greeting">
+        <classes>
+            <class name="tests.GreetingsTest">
+                <methods>
+                    <include name="openGreetings"></include>
+                    <include name="openSmartGreeting"></include>
+                    <include name="playGreeting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Greetings: Record a greeting">
+        <classes>
+            <class name="tests.GreetingsTest">
+                <methods>
+                    <include name="openGreetings"></include>
+                    <include name="recordGreeting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Greetings: Play recorded greeting">
+        <classes>
+            <class name="tests.GreetingsTest">
+                <methods>
+                    <include name="openGreetings"></include>
+                    <include name="openTestGreeting"></include>
+                    <include name="playGreeting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Greetings: Add contact to a greeting">
+        <classes>
+            <class name="tests.GreetingsTest">
+                <methods>
+                    <include name="openGreetings"></include>
+                    <include name="addContactToGreeting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Greetings: Set as a main greeting">
+        <classes>
+            <class name="tests.GreetingsTest">
+                <methods>
+                    <include name="openGreetings"></include>
+                    <include name="setAsMainGreeting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Greetings: Delete recorded greeting">
+        <classes>
+            <class name="tests.GreetingsTest">
+                <methods>
+                    <include name="openGreetings"></include>
+                    <include name="openTestGreeting"></include>
+                    <include name="deleteGreeting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

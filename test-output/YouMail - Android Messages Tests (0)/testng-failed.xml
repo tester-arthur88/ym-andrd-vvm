@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [YouMail - Android Messages Tests (0)]">
+  <test name="Greetings: Record a greeting(failed)">
+    <classes>
+      <class name="tests.GreetingsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="recordGreeting"/>
+        </methods>
+      </class> <!-- tests.GreetingsTest -->
+    </classes>
+  </test> <!-- Greetings: Record a greeting(failed) -->
+</suite> <!-- Failed suite [YouMail - Android Messages Tests (0)] -->
