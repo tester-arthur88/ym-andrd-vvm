@@ -38,14 +38,20 @@ public class ActivationScreen {
     );
 
     /*!! Dynamic, depends on the Carrier*/
-    By forCarrierNameLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
-            "/android.widget.RelativeLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/activate_carrier']" +
-            "/android.widget.TextView[@index='2' and @resource-id='com.youmail.android.vvm:id/tv_on_your_carrier_phone']"
+//    By forCarrierNameLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
+//            "/android.widget.RelativeLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/activate_carrier']" +
+//            "/android.widget.TextView[@index='2' and @resource-id='com.youmail.android.vvm:id/tv_on_your_carrier_phone']"
+//    );
+
+    By forCarrierNameLocator = By.xpath("//android.widget.TextView[@index='2' and @resource-id='com.youmail.android.vvm:id/tv_on_your_carrier_phone']"
     );
 
-    By changeCarrierLinkLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
-            "/android.widget.RelativeLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/activate_carrier']" +
-            "/android.widget.TextView[@index='3' and @resource-id='com.youmail.android.vvm:id/tv_not_on_carrier']"
+//    By changeCarrierLinkLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
+//            "/android.widget.RelativeLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/activate_carrier']" +
+//            "/android.widget.TextView[@index='3' and @resource-id='com.youmail.android.vvm:id/tv_not_on_carrier']"
+//    );
+
+    By changeCarrierLinkLocator = By.xpath("//android.widget.TextView[@index='3' and @resource-id='com.youmail.android.vvm:id/tv_not_on_carrier']"
     );
 
     By forwardingExplanationLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
@@ -53,9 +59,12 @@ public class ActivationScreen {
             "/android.widget.TextView[@index='4' and @resource-id='com.youmail.android.vvm:id/tv_explanation']"
     );
 
-    By activateButtonLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
-            "/android.widget.RelativeLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/activate_carrier']" +
-            "/android.widget.Button[@index='6' and @resource-id='com.youmail.android.vvm:id/btn_primary']"
+//    By activateButtonLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
+//            "/android.widget.RelativeLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/activate_carrier']" +
+//            "/android.widget.Button[@index='6' and @resource-id='com.youmail.android.vvm:id/btn_primary']"
+//    );
+
+    By activateButtonLocator = By.xpath("//android.widget.Button[@index='6' and @resource-id='com.youmail.android.vvm:id/btn_primary']"
     );
 
     By skipActivationLinkLocator = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']" +
