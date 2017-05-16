@@ -17,7 +17,7 @@ public class ContactsScreen {
     }
 
     // Element locators
-    By targetContactLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/ContactName' and @text='leigh company']");
+    By targetContactLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/ContactName' and @text='qa Testing']");
 
     // Overflow menu items
     By addContactOverflowLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/title' and @text='Add Contact']");

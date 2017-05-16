@@ -15,8 +15,7 @@ import java.io.IOException;
 public class MessagesScreen {
     private AndroidDriver driver;
 
-    public MessagesScreen(AndroidDriver driver)
-    {
+    public MessagesScreen(AndroidDriver driver) {
         this.driver = driver;
     }
 
@@ -93,23 +92,18 @@ public class MessagesScreen {
             "/android.widget.Button[@index='1' and @resource-id='android:id/button1']"
     );
 
-    public void loadMoreMessages()
-    {
-        try
-        {
+    public void loadMoreMessages() {
+        try {
             Helper.waitForPresent(driver, loadMoreLocator);
             driver.findElement(loadMoreLocator).click();
             System.out.println("Load More Pressed");
             Thread.sleep(7000);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
 
         }
     }
 
-    public void openMessage()
-    {
+    public void openMessage() {
         closeRateUsPopup();
 //        Helper.dismissNotifications(driver);
         Helper.waitForPresent(driver, firstMessageItemLocator);
@@ -118,16 +112,14 @@ public class MessagesScreen {
         System.out.println("Opening Message");
     }
 
-    public void playMessage() throws InterruptedException, BiffException, IOException
-    {
-        Helper.waitForPresent(driver, messagePlayButtonLocator);
+    public void playMessage() throws InterruptedException, BiffException, IOException {
+        Helper.waitForPresentLong(driver, messagePlayButtonLocator);
         driver.findElement(messagePlayButtonLocator).click();
         System.out.println("Message Playback started");
         Thread.sleep(5000);
     }
 
-    public void callSender() throws InterruptedException
-    {
+    public void callSender() throws InterruptedException {
         driver.findElement(callButtonLocator).click();
         System.out.println("Calling sender");
         Thread.sleep(3000);
@@ -135,8 +127,7 @@ public class MessagesScreen {
         System.out.println("Call ended");
     }
 
-    public void textSender()
-    {
+    public void textSender() {
         Helper.waitForPresent(driver, textButtonLocator);
         driver.findElement(textButtonLocator).click();
         System.out.println("Text Sender Open");
@@ -145,37 +136,29 @@ public class MessagesScreen {
         System.out.println("Text Sender Closed");
     }
 
-    public void forwardMessage()
-    {
+    public void forwardMessage() {
         Helper.waitForPresent(driver, emailButtonLocator);
         driver.findElement(emailButtonLocator).click();
         System.out.println("Email Sender Open");
 //        driver.findElement(emailBackButtonLocator).click();
         Helper.adbPressBack();
 
-        try
-        {
+        try {
             driver.findElement(forwardVoicemailExitConfirm).click();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             //
         }
 
         System.out.println("Email Sender Closed");
     }
 
-    public void ditchSender() throws InterruptedException
-    {
+    public void ditchSender() throws InterruptedException {
         Helper.waitForPresent(driver, ditchButtonLocator);
         driver.findElement(ditchButtonLocator).click();
 
-        try
-        {
+        try {
             driver.findElement(ditchConfirmationYesLocator).click();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             //
         }
 
@@ -186,30 +169,22 @@ public class MessagesScreen {
         System.out.println("Sender Unblocked");
     }
 
-    public void closeAutoplayPopup()
-    {
-        try
-        {
+    public void closeAutoplayPopup() {
+        try {
             Helper.waitForPresent(driver, autoplayPopupCloseLocator);
             driver.findElement(autoplayPopupCloseLocator).click();
             System.out.println("Autoplay Popup Closed");
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             //
         }
     }
 
-    public void closeRateUsPopup()
-    {
-        try
-        {
+    public void closeRateUsPopup() {
+        try {
             Helper.waitForPresent(driver, rateUsPopupCloseLocator);
             driver.findElement(rateUsPopupCloseLocator).click();
             System.out.println("Rate Us Popup Closed");
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             //
         }
     }
