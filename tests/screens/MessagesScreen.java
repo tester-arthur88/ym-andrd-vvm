@@ -67,7 +67,7 @@ public class MessagesScreen {
 
     /*Middle Button Bar Ending*/
 
-    By messagePlayButtonLocator = By.xpath("//android.widget.ImageButton[@index='0' and @resource-id='com.youmail.android.vvm:id/pause']");
+    By messagePlayButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/pause']");
 
     By autoplayPopupCloseLocator = By.xpath("//android.widget.LinearLayout[@index='0' and @resource-id='android:id/parentPanel']" +
             "/android.widget.LinearLayout[@index='2' and @resource-id='android:id/buttonPanel']" +

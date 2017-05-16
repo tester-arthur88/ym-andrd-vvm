@@ -3,8 +3,8 @@
 <suite name="YouMail - Android All Test Suites">
     <suite-files>
         <suite-file path="signin_tests"></suite-file>
-        <!--<suite-file path="messages_tests.xml"></suite-file>-->
-        <!--<suite-file path="history_tests.xml"></suite-file>-->
+        <suite-file path="messages_tests.xml"></suite-file>
+        <suite-file path="history_tests.xml"></suite-file>
         <suite-file path="greetings_tests.xml" ></suite-file>
         <suite-file path="contacts_tests.xml" ></suite-file>
         <!--<suite-file path="upgrade_tests"></suite-file>-->
