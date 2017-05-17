@@ -68,9 +68,7 @@ public class MessagesScreen {
 
     By messagePlayButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/pause']");
 
-    By autoplayPopupCloseLocator = By.xpath("//android.widget.LinearLayout[@index='0' and @resource-id='android:id/parentPanel']" +
-            "/android.widget.LinearLayout[@index='2' and @resource-id='android:id/buttonPanel']" +
-            "/android.widget.Button[@index='1' and @resource-id='android:id/button2']"
+    By autoplayPopupCloseLocator = By.xpath("//android.widget.Button[@resource-id='android:id/button2']"
     );
 
     By ditchConfirmationYesLocator = By.xpath("//android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/confirm_bottom_panel']" +
