@@ -48,6 +48,7 @@
             <class name="tests.GreetingsTest">
                 <methods>
                     <include name="openGreetings"></include>
+                    <include name="openTestGreeting"></include>
                     <include name="setAsMainGreeting"></include>
                 </methods>
             </class>

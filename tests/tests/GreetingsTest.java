@@ -72,7 +72,7 @@ public class GreetingsTest extends AndroidSettings {
     public void setAsMainGreeting()
     {
         GreetingsScreen greetingsScreen = new GreetingsScreen(driver);
-        greetingsScreen.openTestGreeting();
+//        greetingsScreen.openTestGreeting();
         greetingsScreen.setAsMainGreeting();
     }
 }
