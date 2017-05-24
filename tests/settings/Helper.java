@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by aatayants on 11/29/2016.
@@ -182,6 +183,13 @@ public class Helper {
 //        {
 //            e.printStackTrace();
 //        }
+    }
+
+    public static List<AndroidElement> getElementsByLocator(AndroidDriver driver, By elementLocator)
+    {
+        List<AndroidElement> elements = driver.findElements(elementLocator);
+
+        return elements;
     }
 
     public static Sheet readFile(int sheetNum, String fileName) throws BiffException, IOException

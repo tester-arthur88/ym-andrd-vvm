@@ -116,6 +116,10 @@ public class MainMenu extends AndroidSettings {
             "/android.widget.FrameLayout[@index='14' and @resource-id='com.youmail.android.vvm:id/drawer_item_layout']"
     );
 
+    public void openFoldersDropdown()
+    {
+        driver.findElement(folderDropDownLocator).click();
+    }
 
     public void openOverflowMenu()
     {

@@ -28,6 +28,15 @@ public class MessagesScreen {
 //            "/android.widget.LinearLayout[@index='2' and @resource-id='com.youmail.android.vvm:id/name_time_transcription_host']"
 //    );
 
+    // Folder dropdown elements locators
+    By inboxFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Inbox']");
+
+    By saveFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Save']");
+
+    By spamFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Spam']");
+
+    By trashFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Trash']");
+
     By loadMoreLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/empty_list_text']");
 
     By firstMessageItemLocator = By.xpath("//android.widget.ListView[@index='0' and @resource-id='android:id/list']" +
@@ -89,6 +98,42 @@ public class MessagesScreen {
     By forwardVoicemailExitConfirm = By.xpath("//android.widget.LinearLayout[@index='2' and @resource-id='android:id/buttonPanel']" +
             "/android.widget.Button[@index='1' and @resource-id='android:id/button1']"
     );
+
+    public void openInboxFolder() throws InterruptedException
+    {
+        Helper.waitForPresent(driver, inboxFolderLocator);
+        driver.findElement(inboxFolderLocator).click();
+        Thread.sleep(3000);
+
+        System.out.println("Inbox open");
+    }
+
+    public void openSaveFolder() throws InterruptedException
+    {
+        Helper.waitForPresent(driver, saveFolderLocator);
+        driver.findElement(saveFolderLocator).click();
+        Thread.sleep(3000);
+
+        System.out.println("Save open");
+    }
+
+    public void openSpamFolder() throws InterruptedException
+    {
+        Helper.waitForPresent(driver, spamFolderLocator);
+        driver.findElement(spamFolderLocator).click();
+        Thread.sleep(3000);
+
+        System.out.println("Spam open");
+    }
+
+    public void openTrashFolder() throws InterruptedException
+    {
+        Helper.waitForPresent(driver, trashFolderLocator);
+        driver.findElement(trashFolderLocator).click();
+        Thread.sleep(3000);
+
+        System.out.println("Trash open");
+    }
 
     public void loadMoreMessages() {
         try {

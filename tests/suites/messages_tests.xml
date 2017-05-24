@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="YouMail - Android Messages Tests">
-
+    <test name="Messages: Open Save Folder" preserve-order="true">
+        <classes>
+            <class name="tests.MessagesTest">
+                <methods>
+                    <include name="openSave"></include>
+                    <include name="openSpam"></include>
+                    <include name="openTrash"></include>
+                    <include name="openInbox"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--<test name="Messages: Open Spam Folder" preserve-order="true">-->
+        <!--<classes>-->
+            <!--<class name="tests.MessagesTest">-->
+                <!--<methods>-->
+                    <!--<include name="openSpam"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+    <!--<test name="Messages: Open Trash Folder" preserve-order="true">-->
+        <!--<classes>-->
+            <!--<class name="tests.MessagesTest">-->
+                <!--<methods>-->
+                    <!--<include name="openTrash"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+    <!--<test name="Messages: Open Inbox Folder" preserve-order="true">-->
+        <!--<classes>-->
+            <!--<class name="tests.MessagesTest">-->
+                <!--<methods>-->
+                    <!--<include name="openInbox"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
     <test name="Messages: Load More messages" preserve-order="true">
         <classes>
             <class name="tests.MessagesTest">

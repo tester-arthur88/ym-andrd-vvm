@@ -1,9 +1,12 @@
 package screens;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import settings.AndroidSettings;
 import settings.Helper;
+
+import java.util.List;
 
 /**
  * Created by aatayants on 2/28/2017.
@@ -16,6 +19,9 @@ public class HistoryScreen
     {
         this.driver = driver;
     }
+
+    // Checkbox locators
+    By checkBoxLocator = By.xpath("//android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']");
 
     By firstEntryLocator = By.xpath("//android.widget.FrameLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/maincontent']" +
             "/android.widget.FrameLayout[@index='0']" +
@@ -91,5 +97,18 @@ public class HistoryScreen
         Thread.sleep(45000);
         driver.findElement(ditchButtonLocator).click();
         System.out.println("Entry Unblocked");
+    }
+
+    public void getAllCheckBoxes()
+    {
+        List<AndroidElement> checkBoxes = Helper.getElementsByLocator(driver, checkBoxLocator);
+
+        if (checkBoxes.size() >= 2)
+        {
+            for (int i = 0; i <= 1; i++)
+            {
+                System.out.println(checkBoxes.get(i).getAttribute("innerHTML"));
+            }
+        }
     }
 }

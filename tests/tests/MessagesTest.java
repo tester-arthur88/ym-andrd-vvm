@@ -16,6 +16,46 @@ import java.util.HashMap;
 public class MessagesTest extends AndroidSettings {
 
     @Test
+    public void openInbox() throws InterruptedException
+    {
+        MainMenu mainMenu = new MainMenu(driver);
+        MessagesScreen messagesScreen = new MessagesScreen(driver);
+
+        mainMenu.openFoldersDropdown();
+        messagesScreen.openInboxFolder();
+    }
+
+    @Test
+    public void openSave() throws InterruptedException
+    {
+        MainMenu mainMenu = new MainMenu(driver);
+        MessagesScreen messagesScreen = new MessagesScreen(driver);
+
+        mainMenu.openFoldersDropdown();
+        messagesScreen.openSaveFolder();
+    }
+
+    @Test
+    public void openSpam() throws InterruptedException
+    {
+        MainMenu mainMenu = new MainMenu(driver);
+        MessagesScreen messagesScreen = new MessagesScreen(driver);
+
+        mainMenu.openFoldersDropdown();
+        messagesScreen.openSpamFolder();
+    }
+
+    @Test
+    public void openTrash() throws InterruptedException
+    {
+        MainMenu mainMenu = new MainMenu(driver);
+        MessagesScreen messagesScreen = new MessagesScreen(driver);
+
+        mainMenu.openFoldersDropdown();
+        messagesScreen.openTrashFolder();
+    }
+
+    @Test
     public void loadMoreMessages()
     {
         MessagesScreen messagesScreen = new MessagesScreen(driver);

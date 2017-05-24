@@ -11,6 +11,19 @@ import settings.Helper;
  */
 public class HistoryTest extends AndroidSettings {
     @Test
+    public void getAllCheckBoxes()
+    {
+        Helper.dismissNotifications(driver);
+        MainMenu mainMenu = new MainMenu(driver);
+        System.out.println("Main Menu");
+        mainMenu.openMenu();
+        mainMenu.openHistory();
+
+        HistoryScreen historyScreen = new HistoryScreen(driver);
+        historyScreen.getAllCheckBoxes();
+    }
+
+    @Test
     public void openEntry()
     {
         Helper.dismissNotifications(driver);
