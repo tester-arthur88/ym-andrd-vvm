@@ -5,7 +5,7 @@
         <classes>
             <class name="tests.HistoryTest">
                 <methods>
-                    <include name="getAllCheckBoxes"></include>
+                    <include name="bulkDeleteItems"></include>
                 </methods>
             </class>
         </classes>

@@ -23,6 +23,22 @@ public class HistoryScreen
     // Checkbox locators
     By checkBoxLocator = By.xpath("//android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']");
 
+//    By fullCheckBoxPath = By.xpath("//android.widget.LinearLayout[@index='0']" +
+//            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/row_content']" +
+//            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/message_row_status_widget']" +
+//            "/android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']"
+//    );
+
+//    String itemIndex;
+//
+//    By fullCheckBoxPath = By.xpath("//android.widget.LinearLayout[@index='" + itemIndex + "']" +
+//            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/row_content']" +
+//            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/message_row_status_widget']" +
+//            "/android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']"
+//    );
+
+    By deleteSelectedItemsLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/menu_item_delete']");
+
     By firstEntryLocator = By.xpath("//android.widget.FrameLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/maincontent']" +
             "/android.widget.FrameLayout[@index='0']" +
             "/android.widget.FrameLayout[@index='0' and @resource-id='android:id/listContainer']" +
@@ -52,6 +68,19 @@ public class HistoryScreen
             "/android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/button_bar']" +
             "/android.widget.Button[@index='0' and @resource-id='com.youmail.android.vvm:id/button_yes']"
     );
+
+    public static By getfullCheckBoxPath(int index)
+    {
+        String itemIndex = String.valueOf(index);
+
+        By fullCheckBoxPath = By.xpath("//android.widget.LinearLayout[@index='" + itemIndex + "']" +
+                "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/row_content']" +
+                "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/message_row_status_widget']" +
+                "/android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']"
+        );
+
+        return fullCheckBoxPath;
+    }
 
     public void openEntry()
     {
@@ -99,7 +128,7 @@ public class HistoryScreen
         System.out.println("Entry Unblocked");
     }
 
-    public void getAllCheckBoxes()
+    public void bulkDeleteItems() throws  InterruptedException
     {
         List<AndroidElement> checkBoxes = Helper.getElementsByLocator(driver, checkBoxLocator);
 
@@ -107,8 +136,20 @@ public class HistoryScreen
         {
             for (int i = 0; i <= 1; i++)
             {
-                System.out.println(checkBoxes.get(i).getAttribute("innerHTML"));
+//                checkBoxes.get(i).click();
+                By checkbox = getfullCheckBoxPath(i);
+                driver.findElement(checkbox).click();
             }
+
+            Thread.sleep(8000);
+            Helper.waitForPresent(driver, deleteSelectedItemsLocator);
+            driver.findElement(deleteSelectedItemsLocator).click();
+
+            System.out.println("Deleted selected items");
+        }
+        else
+        {
+            System.out.println("Bulk delete skipped: not enough entries");
         }
     }
 }

@@ -11,7 +11,7 @@ import settings.Helper;
  */
 public class HistoryTest extends AndroidSettings {
     @Test
-    public void getAllCheckBoxes()
+    public void bulkDeleteItems() throws InterruptedException
     {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
@@ -20,7 +20,7 @@ public class HistoryTest extends AndroidSettings {
         mainMenu.openHistory();
 
         HistoryScreen historyScreen = new HistoryScreen(driver);
-        historyScreen.getAllCheckBoxes();
+        historyScreen.bulkDeleteItems();
     }
 
     @Test
