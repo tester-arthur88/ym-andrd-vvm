@@ -19,7 +19,7 @@ public class SignInTest extends AndroidSettings {
         SignInScreen signInScreen = new SignInScreen(driver);
         HashMap<String, HashMap<String, String>> testData = Helper.getTestData(1);
 //        signInScreen.verifyTexts();
-//        signInScreen.typePhone(testData.get("1").get("phone_number"));
+        signInScreen.typePhone(testData.get("1").get("phone_number"));
         signInScreen.typePassword(testData.get("1").get("password"));
         signInScreen.clickSignIn();
         Helper.divideLine();
@@ -31,6 +31,7 @@ public class SignInTest extends AndroidSettings {
 
         ActivationScreen activationScreen = new ActivationScreen(driver);
 //        activationScreen.verifyTexts();
+        activationScreen.selectCarrier();
         activationScreen.verifyCarrierMatches();
         activationScreen.clickActivate();
         Helper.divideLine();

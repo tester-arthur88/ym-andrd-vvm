@@ -122,6 +122,12 @@ public class ActivationScreen {
     {
         String carrierLocatorPart1 = "//android.widget.TextView[@resource-id='android:id/text1' and @text='";
         String deviceCarrierName = Helper.getCarrierName();
+
+        if (deviceCarrierName.equals("AT&T"))
+        {
+            deviceCarrierName = deviceCarrierName.concat(" Wireless");
+        }
+
         deviceCarrierName = deviceCarrierName.substring(0, 1).toUpperCase() + deviceCarrierName.substring(1);
         String carrierLocatorPart2 = "']";
 

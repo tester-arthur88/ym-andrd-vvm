@@ -23,6 +23,18 @@ public class HistoryScreen
     // Checkbox locators
     By checkBoxLocator = By.xpath("//android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']");
 
+    By firstCheckBoxLocator = By.xpath("//android.widget.LinearLayout[@index='0']" +
+            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/row_content']" +
+            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/message_row_status_widget']" +
+            "/android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']"
+    );
+
+    By secondCheckBoxLocator = By.xpath("//android.widget.LinearLayout[@index='1']" +
+            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/row_content']" +
+            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/message_row_status_widget']" +
+            "/android.widget.CheckedTextView[@resource-id='com.youmail.android.vvm:id/select_checkbox']"
+    );
+
 //    By fullCheckBoxPath = By.xpath("//android.widget.LinearLayout[@index='0']" +
 //            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/row_content']" +
 //            "/android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/message_row_status_widget']" +
@@ -134,12 +146,15 @@ public class HistoryScreen
 
         if (checkBoxes.size() >= 2)
         {
-            for (int i = 0; i <= 1; i++)
-            {
-//                checkBoxes.get(i).click();
-                By checkbox = getfullCheckBoxPath(i);
-                driver.findElement(checkbox).click();
-            }
+//            for (int i = 0; i <= 1; i++)
+//            {
+////                checkBoxes.get(i).click();
+//                By checkbox = getfullCheckBoxPath(i);
+//                driver.findElement(checkbox).click();
+//            }
+
+            driver.findElement(firstCheckBoxLocator).click();
+            driver.findElement(secondCheckBoxLocator).click();
 
             Thread.sleep(8000);
             Helper.waitForPresent(driver, deleteSelectedItemsLocator);
