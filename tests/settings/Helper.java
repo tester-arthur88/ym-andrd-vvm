@@ -37,7 +37,7 @@ public class Helper {
 
     public static void waitForPresentSuperLong(AndroidDriver driver, By locator)
     {
-        WebDriverWait wait = new WebDriverWait(driver, 900);
+        WebDriverWait wait = new WebDriverWait(driver, 1000);
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
