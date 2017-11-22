@@ -1,5 +1,6 @@
 package settings;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import jxl.Sheet;
@@ -41,38 +42,50 @@ public class Helper {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    public static void swipeDownElementLight(AndroidDriver driver, AndroidElement element, int duration)
+    public static void swipeDownElementLight(TouchAction touchAction, AndroidDriver driver, AndroidElement element, int duration)
     {
         int topY = element.getLocation().getY();
         int bottomY = (topY + element.getSize().getHeight()) / 3;
         int centerX = element.getLocation().getX() + (element.getSize().getWidth() / 2);
-        driver.swipe(centerX, bottomY, centerX, topY, duration);
+//        driver.swipe(centerX, bottomY, centerX, topY, duration);
+
+        touchAction = new TouchAction(driver);
+        touchAction.press(centerX, bottomY).moveTo(centerX, topY).release().perform();
     }
 
-    public static void swipeDownElement(AndroidDriver driver, AndroidElement element, int duration)
+    public static void swipeDownElement(TouchAction touchAction, AndroidDriver driver, AndroidElement element, int duration)
     {
         int topY = element.getLocation().getY();
         int bottomY = topY + element.getSize().getHeight() - 2;
         int centerX = element.getLocation().getX() + (element.getSize().getWidth() / 2);
-        driver.swipe(centerX, bottomY, centerX, topY, duration);
+//        driver.swipe(centerX, bottomY, centerX, topY, duration);
+
+        touchAction = new TouchAction(driver);
+        touchAction.press(centerX, bottomY).moveTo(centerX, topY).release().perform();
     }
 
-    public static void swipeUpElement(AndroidDriver driver, AndroidElement element, int duration)
+    public static void swipeUpElement(TouchAction touchAction, AndroidDriver driver, AndroidElement element, int duration)
     {
         int topY = element.getLocation().getY();
         int bottomY = topY + element.getSize().getHeight() - 2;
         int centerX = element.getLocation().getX() + (element.getSize().getWidth() / 2);
-        driver.swipe(centerX, topY, centerX, bottomY, duration);
+//        driver.swipe(centerX, topY, centerX, bottomY, duration);
+
+        touchAction = new TouchAction(driver);
+        touchAction.press(centerX, topY).moveTo(centerX, bottomY).release().perform();
     }
 
-    public static void swipeRightToLeft(AndroidDriver driver)
+    public static void swipeRightToLeft(TouchAction touchAction, AndroidDriver driver)
     {
         Dimension screenSize = driver.manage().window().getSize();
         int startX = (int) (screenSize.width * 0.7);
         int endX = (int) (screenSize.width * 0.3);
         int y = screenSize.height / 2;
 
-        driver.swipe(startX, y, endX, y, 300);
+//        driver.swipe(startX, y, endX, y, 300);
+
+        touchAction = new TouchAction(driver);
+        touchAction.press(startX, y).moveTo(endX, y).release().perform();
     }
 
     public static void dismissNotifications(AndroidDriver driver)

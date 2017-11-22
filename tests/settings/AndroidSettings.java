@@ -37,7 +37,7 @@ public class AndroidSettings {
         capabilities.setCapability("deviceName", "Android");
         capabilities.setCapability("browserName", "Android");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "7.0");
+        capabilities.setCapability("platformVersion", "8.0");
         capabilities.setCapability("autoLaunch", true);
         capabilities.setCapability("noReset", "true");
         capabilities.setCapability("full-reset", "false");
