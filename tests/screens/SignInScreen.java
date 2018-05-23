@@ -47,28 +47,15 @@ public class SignInScreen {
         driver.findElement(permissionAllowButtonLocator).click();
     }
 
-    public void typePhone(/*String phoneNumber*/)
+    public void typePhone(String phoneNumber)
     {
         Helper.waitForPresent(driver, phoneEmailInputLocator);
         driver.findElement(phoneEmailInputLocator).clear();
-//        driver.findElement(phoneEmailInputLocator).sendKeys(phoneNumber);
-        for (int i = 0; i <= 2; i++)
-        {
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            driver.findElement(phoneEmailInputLocator).click();
-            System.out.println("Tap...");
-        }
+        driver.findElement(phoneEmailInputLocator).sendKeys(phoneNumber);
 
         Helper.keyboardHide(driver);
 
-//        System.out.println("Phone number/email: " + phoneNumber);
-        System.out.println("Phone number/email: fetched");
+        System.out.println("Phone number/email: " + phoneNumber);
     }
 
     public void typePassword(String password)

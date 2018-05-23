@@ -16,21 +16,19 @@ public class SignInTest extends AndroidSettings {
     public void signInPositive() throws InterruptedException, BiffException, IOException
     {
         String phoneModel = Helper.getPhoneModel();
-        HashMap<String, HashMap<String, String>> testData = Helper.getTestData(1, phoneModel);
+        HashMap<String, String> testData = Helper.getTestData(1, phoneModel);
 
-        System.out.println("Phone Model: " + testData.get("1").get("phone_model"));
-        System.out.println("Phone Number: " + testData.get("1").get("phone_number"));
-        System.out.println("Password: " + testData.get("1").get("password"));
+        System.out.println("Phone Model: " + phoneModel + ", Android Version: " + Helper.getAndrdVersion());
 
-        /*InitialScreen initialScreen = new InitialScreen(driver);
+        InitialScreen initialScreen = new InitialScreen(driver);
         initialScreen.tapSignIn();
 
         SignInScreen signInScreen = new SignInScreen(driver);
         signInScreen.allowPermissions();
-        signInScreen.typePhone();
-        signInScreen.typePassword(testData.get("1").get("password"));
+        signInScreen.typePhone(testData.get("phone_number"));
+        signInScreen.typePassword(testData.get("password"));
         signInScreen.clickSignIn();
-        Helper.divideLine();*/
+        Helper.divideLine();
     }
 
     @org.testng.annotations.Test

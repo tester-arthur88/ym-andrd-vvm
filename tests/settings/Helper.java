@@ -244,7 +244,7 @@ public class Helper {
         return sheet;
     }
 
-    public static HashMap<String, HashMap<String, String>> getTestData(int sheetNum, String testDeviceModel) throws BiffException, IOException
+    public static HashMap<String, String> getTestData(int sheetNum, String testDeviceModel) throws BiffException, IOException
     {
 //        Sheet sheet;
 //        FileInputStream xls = new FileInputStream("TestData.xls");
@@ -253,7 +253,8 @@ public class Helper {
 //        sheet = workbook.getSheet(sheetNum);
 
         Sheet sheet = readFile(sheetNum, "TestData.xls");
-        HashMap<String, HashMap<String, String>> testData = new HashMap<>();
+//        HashMap<String, HashMap<String, String>> testData = new HashMap<>();
+        HashMap<String, String> testData = new HashMap<>();
 
         for (int row = 1; row < sheet.getRows(); row++)
         {
@@ -262,13 +263,15 @@ public class Helper {
             if (tablePhoneModel.equalsIgnoreCase(testDeviceModel))
             {
                 //System.out.println("Run: " + row);
-                String indexPrimary = String.valueOf(row);
-                testData.put(indexPrimary, new HashMap<>());
+//                String indexPrimary = String.valueOf(row);
+//                String indexPrimary = "0";
+//                testData.put(indexPrimary, new HashMap<>());
                 for (int cols = 0; cols <= sheet.getColumns() - 1; cols++)
                 {
                     String index = sheet.getCell(cols, 0).getContents();
                     String run = sheet.getCell(cols, row).getContents();
-                    testData.get(indexPrimary).put(index, run);
+//                    testData.get(indexPrimary).put(index, run);
+                    testData.put(index, run);
                     //System.out.println(index + ":" + run);
                 }
             }
