@@ -31,6 +31,11 @@ public class SignUpScreen {
     // Complete Sign Up Screen:
     By carrierSelectorLocator = By.xpath("//android.widget.Spinner[@resource-id='com.youmail.android.vvm:id/carriers_spinner']");
 
+    By carriersListContainerLocator = By.xpath("//android.widget.FrameLayout[@index='0']/android.widget.FrameLayout[@index='0']/android.widget.ListView[@index='0']");
+
+    // Should select from a list later
+    By carrierListItemLocator = By.xpath("android.widget.TextView[@resource-id='android:id/text1']");
+
     By fNameInputLocator = By.xpath("//android.widget.EditText[@resource-id='com.youmail.android.vvm:id/first_name']");
 
     By lNameInputLocator = By.xpath("//android.widget.EditText[@resource-id='com.youmail.android.vvm:id/last_name']");
@@ -41,10 +46,13 @@ public class SignUpScreen {
 
     By createAccountButtonLocator = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/primary_btn']");
 
+    By activateHeaderLocator = By.xpath("android.widget.TextView[@resource-id='com.youmail.android.vvm:id/summaryHeadline' and @text='Activate YouMail']");
+
     public void allowPermissions()
     {
         Helper.waitForPresent(driver, permissionContinueButtonLocator);
         driver.findElement(permissionContinueButtonLocator).click();
+        Helper.waitForPresent(driver, permissionAllowButtonLocator);
         driver.findElement(permissionAllowButtonLocator).click();
     }
 
@@ -72,6 +80,7 @@ public class SignUpScreen {
 
     public void typeFName(String fName)
     {
+        Helper.waitForPresent(driver, fNameInputLocator);
         driver.findElement(fNameInputLocator).clear();
         driver.findElement(fNameInputLocator).sendKeys(fName);
     }
@@ -94,8 +103,12 @@ public class SignUpScreen {
         driver.findElement(iAgreeCheckboxLocator).click();
     }
 
-    public void clickCreateAccount()
+    public void clickCreateAccount() throws InterruptedException
     {
         driver.findElement(createAccountButtonLocator).click();
+        Helper.waitForPresentLong(driver, activateHeaderLocator);
+
+        System.out.println("Account created successfully!");
+        Thread.sleep(7000);
     }
 }
