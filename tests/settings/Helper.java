@@ -144,6 +144,22 @@ public class Helper {
         String exec2 = adbExecute(cmd2);
     }
 
+    public static String getAndrdVersion()
+    {
+        String cmd = "adb shell getprop ro.build.version.release";
+        String andrdVersion = adbExecute(cmd);
+
+        return andrdVersion;
+    }
+
+    public static String getPhoneModel()
+    {
+        String cmd = "adb shell getprop ro.product.model";
+        String phoneModel = adbExecute(cmd);
+
+        return phoneModel;
+    }
+
     public static String getCarrierName()
     {
         String cmd = "adb shell getprop gsm.sim.operator.alpha";
@@ -228,7 +244,44 @@ public class Helper {
         return sheet;
     }
 
-    public static HashMap<String, HashMap<String, String>> getTestData(int sheetNum) throws BiffException, IOException
+    public static HashMap<String, HashMap<String, String>> getTestData(int sheetNum, String testDeviceModel) throws BiffException, IOException
+    {
+//        Sheet sheet;
+//        FileInputStream xls = new FileInputStream("TestData.xls");
+//        Workbook workbook = Workbook.getWorkbook(xls);
+//
+//        sheet = workbook.getSheet(sheetNum);
+
+        Sheet sheet = readFile(sheetNum, "TestData.xls");
+        HashMap<String, HashMap<String, String>> testData = new HashMap<>();
+
+        for (int row = 1; row < sheet.getRows(); row++)
+        {
+            String tablePhoneModel = sheet.getCell(0, row).getContents();
+
+            if (tablePhoneModel.equalsIgnoreCase(testDeviceModel))
+            {
+                //System.out.println("Run: " + row);
+                String indexPrimary = String.valueOf(row);
+                testData.put(indexPrimary, new HashMap<>());
+                for (int cols = 0; cols <= sheet.getColumns() - 1; cols++)
+                {
+                    String index = sheet.getCell(cols, 0).getContents();
+                    String run = sheet.getCell(cols, row).getContents();
+                    testData.get(indexPrimary).put(index, run);
+                    //System.out.println(index + ":" + run);
+                }
+            }
+            else
+            {
+                // Don't add this data set
+            }
+        }
+
+        return testData;
+    }
+
+    public static HashMap<String, HashMap<String, String>> getTestDataOld(int sheetNum) throws BiffException, IOException
     {
 //        Sheet sheet;
 //        FileInputStream xls = new FileInputStream("TestData.xls");

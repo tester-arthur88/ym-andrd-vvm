@@ -8,7 +8,6 @@ import settings.AndroidSettings;
 import settings.Helper;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by aatayants on 1/9/2017.
@@ -21,7 +20,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-        mainMenu.openFoldersDropdown();
+//        mainMenu.openFoldersDropdown();
         messagesScreen.openInboxFolder();
     }
 
@@ -31,7 +30,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-        mainMenu.openFoldersDropdown();
+//        mainMenu.openFoldersDropdown();
         messagesScreen.openSaveFolder();
     }
 
@@ -41,7 +40,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-        mainMenu.openFoldersDropdown();
+//        mainMenu.openFoldersDropdown();
         messagesScreen.openSpamFolder();
     }
 
@@ -51,7 +50,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-        mainMenu.openFoldersDropdown();
+//        mainMenu.openFoldersDropdown();
         messagesScreen.openTrashFolder();
     }
 
@@ -59,7 +58,7 @@ public class MessagesTest extends AndroidSettings {
     public void loadMoreMessages()
     {
         MessagesScreen messagesScreen = new MessagesScreen(driver);
-        messagesScreen.loadMoreMessages();
+//        messagesScreen.loadMoreMessages();
     }
 
     @Test
@@ -68,11 +67,11 @@ public class MessagesTest extends AndroidSettings {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
         System.out.println("Main Menu");
-        mainMenu.openMenu();
-        mainMenu.openMessages();
+//        mainMenu.openMenu();
+//        mainMenu.openMessages();
 
         MessagesScreen messagesScreen = new MessagesScreen(driver);
-        messagesScreen.openMessage();
+        messagesScreen.openFirstMessage();
     }
 
     @Test
@@ -103,21 +102,21 @@ public class MessagesTest extends AndroidSettings {
     public void forwardMessage()
     {
         MessagesScreen messagesScreen = new MessagesScreen(driver);
-        messagesScreen.forwardMessage();
+//        messagesScreen.forwardMessage();
     }
 
     @Test
     public void ditchSender() throws InterruptedException
     {
         MessagesScreen messagesScreen = new MessagesScreen(driver);
-        messagesScreen.ditchSender();
+        messagesScreen.blockSender();
     }
 
 
     public void messagesTest() throws InterruptedException, BiffException, IOException
     {
 //        SignInScreen signInScreen = new SignInScreen(driver);
-//        HashMap<String, HashMap<String, String>> testData = Helper.getTestData(1);
+//        HashMap<String, HashMap<String, String>> testData = Helper.getTestDataOld(1);
 //        signInScreen.verifyTexts();
 ////        signInScreen.typePhone(testData.get("1").get("phone_number"));
 //        signInScreen.typePassword(testData.get("1").get("password"));
@@ -150,27 +149,27 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         System.out.println("Main Menu");
 
-        mainMenu.openMenu();
+//        mainMenu.openMenu();
         Thread.sleep(2000);
         mainMenu.closeMenu();
 
         Helper.dismissNotifications(driver);
 
         MessagesScreen messagesScreen = new MessagesScreen(driver);
-        messagesScreen.openMessage();
+        messagesScreen.openFirstMessage();
         messagesScreen.closeAutoplayPopup();
         messagesScreen.playMessage();
         Thread.sleep(7000);
         messagesScreen.callSender();
 
-        messagesScreen.openMessage();
+        messagesScreen.openFirstMessage();
         messagesScreen.textSender();
-        messagesScreen.openMessage();
-        messagesScreen.forwardMessage();
-        messagesScreen.openMessage();
-        messagesScreen.ditchSender();
+        messagesScreen.openFirstMessage();
+//        messagesScreen.forwardMessage();
+        messagesScreen.openFirstMessage();
+        messagesScreen.blockSender();
 
-        mainMenu.openMenu();
+//        mainMenu.openMenu();
         messagesScreen.closeRateUsPopup();
 
         Thread.sleep(25000);

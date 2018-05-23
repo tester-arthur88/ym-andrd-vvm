@@ -31,13 +31,16 @@ public class AndroidSettings {
     @BeforeTest
     public void setUp() throws MalformedURLException, InterruptedException
     {
+        //Temporary solution
+        String andrdVersion = Helper.getAndrdVersion();
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability("automationName", "uiautomator2");
         capabilities.setCapability("deviceName", "Android");
         capabilities.setCapability("browserName", "Android");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "8.0");
+        capabilities.setCapability("platformVersion", andrdVersion);
         capabilities.setCapability("autoLaunch", true);
         capabilities.setCapability("noReset", "true");
         capabilities.setCapability("full-reset", "false");
@@ -45,7 +48,8 @@ public class AndroidSettings {
         capabilities.setCapability("newCommandTimeout", 0);
 //        capabilities.setCapability("app", "C:\\Apk\\youMail-release.apk");
         capabilities.setCapability("appPackage", "com.youmail.android.vvm");
-        capabilities.setCapability("appActivity", "com.youmail.android.vvm.activity.Splash");
+//        capabilities.setCapability("appActivity", "com.youmail.android.vvm.activity.Splash");
+        capabilities.setCapability("appActivity", "com.youmail.android.vvm.main.VVMMainActivity");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

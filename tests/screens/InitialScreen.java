@@ -1,13 +1,8 @@
 package screens;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import jxl.read.biff.BiffException;
 import org.openqa.selenium.By;
 import settings.Helper;
-
-import java.io.IOException;
-import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,10 +19,23 @@ public class InitialScreen {
 
     By sloganLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/tagline']");
 
-    By joinNowButton = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/signup']");
+    By joinNowButtonLocator = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/signup']");
 
-    By signInButton = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/signin']");
+    By signInButtonLocator = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/signin']");
 
+    public void tapJoinNow()
+    {
+        Helper.waitForPresent(driver, joinNowButtonLocator);
+        driver.findElement(joinNowButtonLocator).click();
+    }
+
+    public void tapSignIn()
+    {
+        Helper.waitForPresent(driver, signInButtonLocator);
+        driver.findElement(signInButtonLocator).click();
+    }
+
+    //////////////////////////////TODO
     public void switchToEnvironment(String environment) throws InterruptedException
     {
         By environmentSelectorLocator = By.xpath("//android.widget.CheckedTextView[@text='" + environment + "']");

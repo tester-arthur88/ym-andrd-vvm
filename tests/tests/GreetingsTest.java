@@ -16,8 +16,8 @@ public class GreetingsTest extends AndroidSettings {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
         System.out.println("Main Menu");
-        mainMenu.openMenu();
-        mainMenu.openGreetings();
+//        mainMenu.openMenu();
+//        mainMenu.openGreetings();
     }
 
     @Test
@@ -53,7 +53,7 @@ public class GreetingsTest extends AndroidSettings {
     public void recordGreeting() throws InterruptedException
     {
         MainMenu mainMenu = new MainMenu(driver);
-        mainMenu.openOverflowMenu();
+//        mainMenu.openOverflowMenu();
 
         GreetingsScreen greetingsScreen = new GreetingsScreen(driver);
         greetingsScreen.recordNewGreeting();

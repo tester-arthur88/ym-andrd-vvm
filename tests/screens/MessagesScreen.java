@@ -3,7 +3,6 @@ package screens;
 import io.appium.java_client.android.AndroidDriver;
 import jxl.read.biff.BiffException;
 import org.openqa.selenium.By;
-import settings.AndroidSettings;
 import settings.Helper;
 
 import java.io.IOException;
@@ -11,7 +10,6 @@ import java.io.IOException;
 /**
  * Created by aatayants on 1/9/2017.
  */
-//public class MessagesScreen extends AndroidSettings {
 public class MessagesScreen {
     private AndroidDriver driver;
 
@@ -20,84 +18,95 @@ public class MessagesScreen {
     }
 
     // Element locators
-//    By firstMessageItemLocator = By.xpath("//android.widget.ListView[@index='0' and @resource-id='android:id/list']" +
-//            "/android.widget.LinearLayout[@index='0']" +
-//            "/android.widget.RelativeLayout[@resource-id='com.youmail.android.vvm:id/row_container']" +
-//            "/android.widget.FrameLayout[@index='2' and @resource-id='com.youmail.android.vvm:id/row_slider']" +
-//            "/android.widget.LinearLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/row_content']" +
-//            "/android.widget.LinearLayout[@index='2' and @resource-id='com.youmail.android.vvm:id/name_time_transcription_host']"
-//    );
 
-    // Folder dropdown elements locators
-    By inboxFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Inbox']");
+    // Top Controls Beginning
 
-    By saveFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Save']");
+    By backButtonLocator = By.xpath("//android.widget.ImageView[@resource-id='com.youmail.android.vvm:id/action_mode_close_button' and @content-desc='Done']");
 
-    By spamFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Spam']");
+    By bulkDeleteButtonLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/action_delete' and @content-desc='Delete']");
 
-    By trashFolderLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/folder_name' and @text='Trash']");
+    By bulkMoveButtonLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/action_moveto']");
 
-    By loadMoreLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/empty_list_text']");
+    By overflowMenuButtonLocator = By.xpath("//android.widget.ImageView[@content-desc='More options']");
 
-    By firstMessageItemLocator = By.xpath("//android.widget.ListView[@index='0' and @resource-id='android:id/list']" +
-            "/android.widget.LinearLayout[@index='0']" +
-            "/android.widget.RelativeLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/row_container']"
-    );
+    // Top Controls Ending
 
-    By messageDeleteButton = By.xpath("android.widget.TextView[@index='0' and @resource-id='com.youmail.android.vvm:id/menu_item_delete']");
+    // Move To Controls Beginning
 
-    /*Middle Button Bar Beginning*/
+    By moveToInboxLocator = By.xpath("//android.widget.TextView[@text='Inbox']");
 
-    String middleBtnBarLocator = "//android.widget.LinearLayout[@index='2' and @resource-id='com.youmail.android.vvm:id/caller_detail_btn_group']";
+    By moveToSpamLocator = By.xpath("//android.widget.TextView[@text='Spam']");
 
-    By callButtonLocator = By.xpath(middleBtnBarLocator +
-            "/android.widget.LinearLayout[@index='0' and @resource-id='com.youmail.android.vvm:id/call_btn']"
-    );
+    By moveToTrashLocator = By.xpath("//android.widget.TextView[@text='Trash']");
 
-    By textButtonLocator = By.xpath(middleBtnBarLocator +
-            "/android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/txt_btn']" /*+
-            "/android.widget.ImageView[@index='0' and @resource-id='com.youmail.android.vvm:id/txt']"*/
-    );
+    By moveToSaveLocator = By.xpath("//android.widget.TextView[@text='Save']");
 
-    By textBackButtonLocator = By.xpath("android.widget.ImageView[@index='0' and @resource-id='com.android.mms:id/actionbar_arrow']");
+    // Move To Controls Ending
 
-    By emailButtonLocator = By.xpath(middleBtnBarLocator +
-            "/android.widget.LinearLayout[@index='2' and @resource-id='com.youmail.android.vvm:id/email_btn']"
-    );
+    // Overflow Options Beginning
 
-    By emailBackButtonLocator = By.xpath("//android.view.ViewGroup[@index='0' and @resour2ce-id='com.youmail.android.vvm:id/appbar']" +
-            "/android.widget.ImageButton[@index='0' and @content-desc='Navigate up']"
-    );
+    By markAsReadLocator = By.xpath("//android.widget.TextView[@text='Mark as read']");
 
-    By ditchButtonLocator = By.xpath(middleBtnBarLocator +
-            "/android.widget.LinearLayout[@index='3' and @resource-id='com.youmail.android.vvm:id/ditch_unditch_btn']"
-    );
+    By markAsUnreadLocator = By.xpath("//android.widget.TextView[@text='Mark as unread']");
 
-    /*Middle Button Bar Ending*/
+    // Overflow Options Ending
 
-    By messagePlayButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/pause']");
+    // Folder dropdown elements locators beginning
 
-    By autoplayPopupCloseLocator = By.xpath("//android.widget.Button[@resource-id='android:id/button2']"
-    );
+    By inboxFolderLocator = By.xpath("//android.widget.TextView[@text='Inbox']");
 
-    By ditchConfirmationYesLocator = By.xpath("//android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/confirm_bottom_panel']" +
-            "/android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/button_bar']" +
-            "/android.widget.Button[@index='0' and @resource-id='com.youmail.android.vvm:id/button_yes']"
-    );
+    By spamFolderLocator = By.xpath("//android.widget.TextView[@text='Spam']");
 
-    By ditchConfirmationNoLocator = By.xpath("//android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/confirm_bottom_panel']" +
-            "/android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/button_bar']" +
-            "/android.widget.Button[@index='1' and @resource-id='com.youmail.android.vvm:id/button_no']"
-    );
+    By trashFolderLocator = By.xpath("//android.widget.TextView[@text='Trash']");
 
-    By rateUsPopupCloseLocator = By.xpath("//android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/confirm_bottom_panel']" +
-            "/android.widget.LinearLayout[@index='1' and @resource-id='com.youmail.android.vvm:id/button_bar']" +
-            "/android.widget.Button[@index='2' and @resource-id='com.youmail.android.vvm:id/button_skip']"
-    );
+    By saveFolderLocator = By.xpath("//android.widget.TextView[@text='Save']");
 
-    By forwardVoicemailExitConfirm = By.xpath("//android.widget.LinearLayout[@index='2' and @resource-id='android:id/buttonPanel']" +
-            "/android.widget.Button[@index='1' and @resource-id='android:id/button1']"
-    );
+    By createFolderLocator = By.xpath("//android.widget.TextView[@text='Create New Folder']");
+
+    // Folder dropdown elements locators ending
+
+    // Messages List Beginning
+
+    String messageListContainer = "//android.view.ViewGroup[@resource-id='com.youmail.android.vvm:id/message_list_row' and index='" + "]";
+
+    By messageIconLocator = By.xpath("//android.view.ViewGroup[@resource-id='com.youmail.android.vvm:id/icon_include_container']");
+
+    By messageTitleLocaotr = By.xpath("//android.view.ViewGroup[@resource-id='com.youmail.android.vvm:id/message_container']");
+
+    By messageStarLocator = By.xpath("//android.view.ViewGroup[@resource-id='com.youmail.android.vvm:id/star_container']");
+
+    By firstMessageItemLocator = By.xpath("//android.view.ViewGroup[@resource-id='com.youmail.android.vvm:id/message_list_row' and @index='0']");
+
+    // Messages List Ending
+
+    /*Message Details Beginning*/
+
+    By callerNumberLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/caller_number']");
+
+    By callerEmailLocator = By.xpath("//android.widget.TextView[@resource-id='com.youmail.android.vvm:id/caller_email']");
+
+    By addEditContactLocator = By.xpath("//android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/actions_add_edit_contact_button_container']");
+
+    By blockButtonLocator = By.xpath("//android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/actions_block_button_container']");
+
+    By replyButtonLocator = By.xpath("//android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/actions_reply_button_container']");
+
+    By infoButtonLocator = By.xpath("//android.widget.LinearLayout[@resource-id='com.youmail.android.vvm:id/actions_info_button_container']");
+
+    By messagePlayButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/play_button']");
+
+    By outputSwitchLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/toggle_output_phone_button']");
+
+    By deleteButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/delete_button']");
+
+    By moveButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/folder_button']");
+
+    By shareButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/share_button']");
+
+    /*Message Details Ending*/
+
+    /*Block Screen Beginning*/
+    /*Block Screen Beginning*/
 
     public void openInboxFolder() throws InterruptedException
     {
@@ -135,18 +144,7 @@ public class MessagesScreen {
         System.out.println("Trash open");
     }
 
-    public void loadMoreMessages() {
-        try {
-            Helper.waitForPresent(driver, loadMoreLocator);
-            driver.findElement(loadMoreLocator).click();
-            System.out.println("Load More Pressed");
-            Thread.sleep(7000);
-        } catch (Exception e) {
-
-        }
-    }
-
-    public void openMessage() {
+    public void openFirstMessage() {
         closeRateUsPopup();
 //        Helper.dismissNotifications(driver);
         Helper.waitForPresent(driver, firstMessageItemLocator);
@@ -163,7 +161,7 @@ public class MessagesScreen {
     }
 
     public void callSender() throws InterruptedException {
-        driver.findElement(callButtonLocator).click();
+        driver.findElement(callerNumberLocator).click();
         System.out.println("Calling sender");
         Thread.sleep(3000);
         Helper.adbEndCall();
@@ -171,64 +169,48 @@ public class MessagesScreen {
     }
 
     public void textSender() {
-        Helper.waitForPresent(driver, textButtonLocator);
-        driver.findElement(textButtonLocator).click();
+        Helper.waitForPresent(driver, replyButtonLocator);
+        driver.findElement(replyButtonLocator).click();
         System.out.println("Text Sender Open");
         Helper.adbPressBack();
         Helper.adbPressBack();
         System.out.println("Text Sender Closed");
     }
 
-    public void forwardMessage() {
-        Helper.waitForPresent(driver, emailButtonLocator);
-        driver.findElement(emailButtonLocator).click();
-        System.out.println("Email Sender Open");
-//        driver.findElement(emailBackButtonLocator).click();
-        Helper.adbPressBack();
+    public void blockSender() throws InterruptedException {
+        Helper.waitForPresent(driver, blockButtonLocator);
+        driver.findElement(blockButtonLocator).click();
 
-        try {
-            driver.findElement(forwardVoicemailExitConfirm).click();
-        } catch (Exception e) {
-            //
-        }
-
-        System.out.println("Email Sender Closed");
-    }
-
-    public void ditchSender() throws InterruptedException {
-        Helper.waitForPresent(driver, ditchButtonLocator);
-        driver.findElement(ditchButtonLocator).click();
-
-        try {
-            driver.findElement(ditchConfirmationYesLocator).click();
-        } catch (Exception e) {
-            //
-        }
-
-
-        System.out.println("Sender Blocked");
-        Thread.sleep(45000);
-        driver.findElement(ditchButtonLocator).click();
-        System.out.println("Sender Unblocked");
+//        try {
+//            driver.findElement(ditchConfirmationYesLocator).click();
+//        } catch (Exception e) {
+//            //
+//        }
+//
+//
+//        System.out.println("Sender Blocked");
+//        Thread.sleep(45000);
+//        driver.findElement(blockButtonLocator).click();
+//        System.out.println("Sender Unblocked");
     }
 
     public void closeAutoplayPopup() {
-        try {
-            Helper.waitForPresent(driver, autoplayPopupCloseLocator);
-            driver.findElement(autoplayPopupCloseLocator).click();
-            System.out.println("Autoplay Popup Closed");
-        } catch (Exception e) {
-            //
-        }
+//        try {
+//            Helper.waitForPresent(driver, autoplayPopupCloseLocator);
+//            driver.findElement(autoplayPopupCloseLocator).click();
+//            System.out.println("Autoplay Popup Closed");
+//        } catch (Exception e) {
+//            //
+//        }
     }
 
     public void closeRateUsPopup() {
-        try {
-            Helper.waitForPresent(driver, rateUsPopupCloseLocator);
-            driver.findElement(rateUsPopupCloseLocator).click();
-            System.out.println("Rate Us Popup Closed");
-        } catch (Exception e) {
-            //
-        }
+//        try {
+//            Helper.waitForPresent(driver, rateUsPopupCloseLocator);
+//            driver.findElement(rateUsPopupCloseLocator).click();
+//            System.out.println("Rate Us Popup Closed");
+//        } catch (Exception e) {
+//            //
+//        }
     }
 }

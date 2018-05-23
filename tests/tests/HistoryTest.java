@@ -16,8 +16,8 @@ public class HistoryTest extends AndroidSettings {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
         System.out.println("Main Menu");
-        mainMenu.openMenu();
-        mainMenu.openHistory();
+//        mainMenu.openMenu();
+//        mainMenu.openHistory();
 
         HistoryScreen historyScreen = new HistoryScreen(driver);
         historyScreen.bulkDeleteItems();
@@ -29,8 +29,8 @@ public class HistoryTest extends AndroidSettings {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
         System.out.println("Main Menu");
-        mainMenu.openMenu();
-        mainMenu.openHistory();
+//        mainMenu.openMenu();
+//        mainMenu.openHistory();
 
         HistoryScreen historyScreen = new HistoryScreen(driver);
         historyScreen.openEntry();

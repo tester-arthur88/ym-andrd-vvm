@@ -15,8 +15,8 @@ public class UpgradeTest extends AndroidSettings {
     {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
-        mainMenu.openMenu();
-        mainMenu.tapUpgradeButton();
+//        mainMenu.openMenu();
+//        mainMenu.tapUpgradeButton();
     }
 
     @Test

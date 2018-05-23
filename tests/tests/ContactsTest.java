@@ -16,9 +16,9 @@ public class ContactsTest extends AndroidSettings {
         Helper.dismissNotifications(driver);
         MainMenu mainMenu = new MainMenu(driver);
         System.out.println("Main Menu");
-        mainMenu.openMenu();
-        mainMenu.openContacts();
-        mainMenu.openYouMailersContacts();
+//        mainMenu.openMenu();
+//        mainMenu.openContacts();
+//        mainMenu.openYouMailersContacts();
     }
 
     @Test

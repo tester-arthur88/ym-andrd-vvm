@@ -73,7 +73,7 @@ public class ContactsScreen {
             catch (Exception e)
             {
                 AndroidElement scrollContainer = (AndroidElement) driver.findElement(scrollContainerLocator);
-                Helper.swipeDownElementLight(driver, scrollContainer, 2000);
+//                Helper.swipeDownElementLight(driver, scrollContainer, 2000);
             }
         }
     }

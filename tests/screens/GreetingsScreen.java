@@ -184,7 +184,7 @@ public class GreetingsScreen {
             catch (Exception e)
             {
                 AndroidElement scrollContainer = (AndroidElement) driver.findElement(scrollContainerLocator);
-                Helper.swipeDownElementLight(driver, scrollContainer, 300);
+//                Helper.swipeDownElementLight(driver, scrollContainer, 300);
             }
         }
     }
