@@ -269,9 +269,9 @@ public class Helper {
                 for (int cols = 0; cols <= sheet.getColumns() - 1; cols++)
                 {
                     String index = sheet.getCell(cols, 0).getContents();
-                    String run = sheet.getCell(cols, row).getContents();
+                    String value = sheet.getCell(cols, row).getContents();
 //                    testData.get(indexPrimary).put(index, run);
-                    testData.put(index, run);
+                    testData.put(index, value);
                     //System.out.println(index + ":" + run);
                 }
             }
@@ -292,7 +292,7 @@ public class Helper {
 //
 //        sheet = workbook.getSheet(sheetNum);
 
-        Sheet sheet = readFile(sheetNum, "TestData.xls");
+        Sheet sheet = readFile(sheetNum, "TestData.xlsx");
         HashMap<String, HashMap<String, String>> testData = new HashMap<>();
 
         for (int row = 1; row < sheet.getRows(); row++)

@@ -46,7 +46,7 @@ public class SignUpScreen {
 
     By createAccountButtonLocator = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/primary_btn']");
 
-    By activateHeaderLocator = By.xpath("android.widget.TextView[@resource-id='com.youmail.android.vvm:id/summaryHeadline' and @text='Activate YouMail']");
+    By activationScreenTitleLocator = By.xpath("android.widget.TextView[@text='Activation']");
 
     public void allowPermissions()
     {
@@ -106,7 +106,7 @@ public class SignUpScreen {
     public void clickCreateAccount() throws InterruptedException
     {
         driver.findElement(createAccountButtonLocator).click();
-        Helper.waitForPresentLong(driver, activateHeaderLocator);
+        Helper.waitForPresentLong(driver, activationScreenTitleLocator);
 
         System.out.println("Account created successfully!");
         Thread.sleep(7000);
