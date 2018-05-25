@@ -9,7 +9,8 @@ import settings.Helper;
 /**
  * Created by aatayants on 3/6/2017.
  */
-public class UpgradeTest extends AndroidSettings {
+public class UpgradeTest extends AndroidSettings
+{
     @Test
     public void tapMenuUpgrade()
     {

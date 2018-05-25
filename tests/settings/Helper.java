@@ -18,7 +18,8 @@ import java.util.List;
 /**
  * Created by aatayants on 11/29/2016.
  */
-public class Helper {
+public class Helper
+{
     public static void divideLine()
     {
         System.out.println("=============================================");

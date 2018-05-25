@@ -9,7 +9,8 @@ import settings.Helper;
 /**
  * Created by aatayants on 3/2/2017.
  */
-public class HistoryTest extends AndroidSettings {
+public class HistoryTest extends AndroidSettings
+{
     @Test
     public void bulkDeleteItems() throws InterruptedException
     {

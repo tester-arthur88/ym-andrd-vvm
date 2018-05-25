@@ -9,7 +9,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by aatayants on 12/6/2016.
  */
-public class SignUpScreen {
+public class SignUpScreen
+{
     private AndroidDriver driver;
 
     public SignUpScreen(AndroidDriver driver)

@@ -9,7 +9,8 @@ import settings.Helper;
 /**
  * Created by aatayants on 4/25/2017.
  */
-public class ContactsTest extends AndroidSettings {
+public class ContactsTest extends AndroidSettings
+{
     @Test
     public void openContacts()
     {

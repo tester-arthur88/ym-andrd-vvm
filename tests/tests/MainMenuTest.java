@@ -11,7 +11,8 @@ import java.util.HashMap;
 /**
  * Created by aatayants on 12/20/2016.
  */
-public class MainMenuTest extends AndroidSettings {
+public class MainMenuTest extends AndroidSettings
+{
     @org.testng.annotations.Test
     public void mainMenuTest() throws InterruptedException, BiffException, IOException
     {

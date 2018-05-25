@@ -7,7 +7,8 @@ import settings.Helper;
 /**
  * Created by aatayants on 3/6/2017.
  */
-public class UpgradeScreen {
+public class UpgradeScreen
+{
     private AndroidDriver driver;
 
     public UpgradeScreen(AndroidDriver driver)

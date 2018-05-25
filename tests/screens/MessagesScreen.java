@@ -10,10 +10,12 @@ import java.io.IOException;
 /**
  * Created by aatayants on 1/9/2017.
  */
-public class MessagesScreen {
+public class MessagesScreen
+{
     private AndroidDriver driver;
 
-    public MessagesScreen(AndroidDriver driver) {
+    public MessagesScreen(AndroidDriver driver)
+    {
         this.driver = driver;
     }
 
@@ -113,6 +115,8 @@ public class MessagesScreen {
     /*Block Screen Beginning*/
     /*Block Screen Beginning*/
 
+
+    /*Folder Operations Beginning*/
     public void openInboxFolder() throws InterruptedException
     {
         Helper.waitForPresent(driver, inboxFolderLocator);
@@ -148,6 +152,7 @@ public class MessagesScreen {
 
         System.out.println("Trash open");
     }
+    /*Folder Operations Ending*/
 
     public void openFirstMessage()
     {
@@ -159,6 +164,7 @@ public class MessagesScreen {
         System.out.println("Opening Message");
     }
 
+    /*Message Details Operations Beginning*/
     public void playMessage() throws InterruptedException, BiffException, IOException
     {
         Helper.waitForPresentLong(driver, messagePlayButtonLocator);
@@ -194,6 +200,12 @@ public class MessagesScreen {
 //        System.out.println("Sender Unblocked");
     }
 
+    public void replySender()
+    {
+
+    }
+    /*Message Details Operations Ending*/
+
     public void dismissTutorial() throws InterruptedException
     {
         Thread.sleep(3000);
@@ -202,11 +214,13 @@ public class MessagesScreen {
 
     public void closeAutoplayPopup()
     {
-        try {
+        try
+        {
             Helper.waitForPresent(driver, tapPlayIconLocator);
             driver.findElement(tapPlayIconLocator).click();
             System.out.println("Autoplay Popup Closed");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             //
         }
     }

@@ -21,7 +21,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by aatayants on 11/29/2016.
  */
-public class AndroidSettings {
+public class AndroidSettings
+{
     protected AndroidDriver driver;
 
 //    protected String phoneNumber = "8438017639";

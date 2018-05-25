@@ -14,7 +14,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by aatayants on 11/29/2016.
  */
-public class SignInScreen {
+public class SignInScreen
+{
     private AndroidDriver driver;
 
     public SignInScreen(AndroidDriver driver)

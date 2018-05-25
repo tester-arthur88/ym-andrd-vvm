@@ -6,7 +6,8 @@ import org.openqa.selenium.By;
 /**
  * Created by aatayants on 12/6/2016.
  */
-public class PhoneVerificationScreen {
+public class PhoneVerificationScreen
+{
 
     private AndroidDriver driver;
 

@@ -11,7 +11,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by aatayants on 3/6/2017.
  */
-public class GreetingsScreen {
+public class GreetingsScreen
+{
     private AndroidDriver driver;
 
     public GreetingsScreen(AndroidDriver driver)

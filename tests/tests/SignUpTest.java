@@ -11,7 +11,8 @@ import java.util.HashMap;
 /**
  * Created by aatayants on 12/6/2016.
  */
-public class SignUpTest extends AndroidSettings {
+public class SignUpTest extends AndroidSettings
+{
     @org.testng.annotations.Test
     public void signUp() throws InterruptedException, BiffException, IOException
     {

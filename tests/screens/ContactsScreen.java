@@ -8,7 +8,8 @@ import settings.Helper;
 /**
  * Created by aatayants on 4/25/2017.
  */
-public class ContactsScreen {
+public class ContactsScreen
+{
     private AndroidDriver driver;
 
     public ContactsScreen(AndroidDriver driver)

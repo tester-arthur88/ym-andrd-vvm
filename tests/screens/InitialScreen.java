@@ -6,7 +6,8 @@ import settings.Helper;
 
 import static org.junit.Assert.assertEquals;
 
-public class InitialScreen {
+public class InitialScreen
+{
     private AndroidDriver driver;
 
     public InitialScreen(AndroidDriver driver)

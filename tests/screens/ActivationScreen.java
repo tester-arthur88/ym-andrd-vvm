@@ -15,7 +15,8 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by aatayants on 12/1/2016.
  */
-public class ActivationScreen {
+public class ActivationScreen
+{
     private AndroidDriver driver;
 
     public ActivationScreen(AndroidDriver driver)

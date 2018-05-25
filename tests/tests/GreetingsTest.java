@@ -9,7 +9,8 @@ import settings.Helper;
 /**
  * Created by aatayants on 4/18/2017.
  */
-public class GreetingsTest extends AndroidSettings {
+public class GreetingsTest extends AndroidSettings
+{
     @Test
     public void openGreetings()
     {
