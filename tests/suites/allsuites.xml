@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="YouMail - Android All Test Suites">
     <suite-files>
-        <suite-file path="signup_tests.xml"></suite-file>
+        <!--<suite-file path="signup_tests.xml"></suite-file>-->
         <!--<suite-file path="signin_tests"></suite-file>-->
-        <!--<suite-file path="messages_tests.xml"></suite-file>-->
+        <suite-file path="messages_tests.xml"></suite-file>
         <!--<suite-file path="history_tests.xml"></suite-file>-->
         <!--<suite-file path="greetings_tests.xml" ></suite-file>-->
         <!--<suite-file path="contacts_tests.xml" ></suite-file>-->

@@ -2,6 +2,7 @@ package tests;
 
 import appcontrols.MainMenu;
 import jxl.read.biff.BiffException;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import screens.*;
 import settings.AndroidSettings;
@@ -12,7 +13,15 @@ import java.io.IOException;
 /**
  * Created by aatayants on 1/9/2017.
  */
-public class MessagesTest extends AndroidSettings {
+public class MessagesTest extends AndroidSettings
+{
+    @BeforeTest
+    public void dismissTutorial() throws InterruptedException
+    {
+        MessagesScreen messagesScreen = new MessagesScreen(driver);
+
+        messagesScreen.dismissTutorial();
+    }
 
     @Test
     public void openInbox() throws InterruptedException
@@ -20,7 +29,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-//        mainMenu.openFoldersDropdown();
+        mainMenu.openFolderDropDown();
         messagesScreen.openInboxFolder();
     }
 
@@ -30,7 +39,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-//        mainMenu.openFoldersDropdown();
+        mainMenu.openFolderDropDown();
         messagesScreen.openSaveFolder();
     }
 
@@ -40,7 +49,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-//        mainMenu.openFoldersDropdown();
+        mainMenu.openFolderDropDown();
         messagesScreen.openSpamFolder();
     }
 
@@ -50,7 +59,7 @@ public class MessagesTest extends AndroidSettings {
         MainMenu mainMenu = new MainMenu(driver);
         MessagesScreen messagesScreen = new MessagesScreen(driver);
 
-//        mainMenu.openFoldersDropdown();
+        mainMenu.openFolderDropDown();
         messagesScreen.openTrashFolder();
     }
 
@@ -72,6 +81,7 @@ public class MessagesTest extends AndroidSettings {
 
         MessagesScreen messagesScreen = new MessagesScreen(driver);
         messagesScreen.openFirstMessage();
+        messagesScreen.closeAutoplayPopup();
     }
 
     @Test
@@ -89,13 +99,6 @@ public class MessagesTest extends AndroidSettings {
         MessagesScreen messagesScreen = new MessagesScreen(driver);
         messagesScreen.callSender();
         Thread.sleep(15000);
-    }
-
-    @Test
-    public void textSender()
-    {
-        MessagesScreen messagesScreen = new MessagesScreen(driver);
-        messagesScreen.textSender();
     }
 
     @Test

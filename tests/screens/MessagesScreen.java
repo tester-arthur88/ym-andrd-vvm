@@ -105,6 +105,11 @@ public class MessagesScreen {
 
     /*Message Details Ending*/
 
+    /*Auto-Play Popup Beginning*/
+    By tapPlayIconLocator = By.xpath("//android.widget.Button[@text='TAP PLAY ICON']");
+    By useAutoplayLocator = By.xpath("//android.widget.Button[@text='USE AUTO-PLAY']");
+    /*Auto-Play Popup Ending*/
+
     /*Block Screen Beginning*/
     /*Block Screen Beginning*/
 
@@ -144,7 +149,8 @@ public class MessagesScreen {
         System.out.println("Trash open");
     }
 
-    public void openFirstMessage() {
+    public void openFirstMessage()
+    {
         closeRateUsPopup();
 //        Helper.dismissNotifications(driver);
         Helper.waitForPresent(driver, firstMessageItemLocator);
@@ -153,14 +159,16 @@ public class MessagesScreen {
         System.out.println("Opening Message");
     }
 
-    public void playMessage() throws InterruptedException, BiffException, IOException {
+    public void playMessage() throws InterruptedException, BiffException, IOException
+    {
         Helper.waitForPresentLong(driver, messagePlayButtonLocator);
         driver.findElement(messagePlayButtonLocator).click();
         System.out.println("Message Playback started");
         Thread.sleep(5000);
     }
 
-    public void callSender() throws InterruptedException {
+    public void callSender() throws InterruptedException
+    {
         driver.findElement(callerNumberLocator).click();
         System.out.println("Calling sender");
         Thread.sleep(3000);
@@ -168,16 +176,8 @@ public class MessagesScreen {
         System.out.println("Call ended");
     }
 
-    public void textSender() {
-        Helper.waitForPresent(driver, replyButtonLocator);
-        driver.findElement(replyButtonLocator).click();
-        System.out.println("Text Sender Open");
-        Helper.adbPressBack();
-        Helper.adbPressBack();
-        System.out.println("Text Sender Closed");
-    }
-
-    public void blockSender() throws InterruptedException {
+    public void blockSender() throws InterruptedException
+    {
         Helper.waitForPresent(driver, blockButtonLocator);
         driver.findElement(blockButtonLocator).click();
 
@@ -194,17 +194,25 @@ public class MessagesScreen {
 //        System.out.println("Sender Unblocked");
     }
 
-    public void closeAutoplayPopup() {
-//        try {
-//            Helper.waitForPresent(driver, autoplayPopupCloseLocator);
-//            driver.findElement(autoplayPopupCloseLocator).click();
-//            System.out.println("Autoplay Popup Closed");
-//        } catch (Exception e) {
-//            //
-//        }
+    public void dismissTutorial() throws InterruptedException
+    {
+        Thread.sleep(3000);
+        Helper.adbPressBack();
     }
 
-    public void closeRateUsPopup() {
+    public void closeAutoplayPopup()
+    {
+        try {
+            Helper.waitForPresent(driver, tapPlayIconLocator);
+            driver.findElement(tapPlayIconLocator).click();
+            System.out.println("Autoplay Popup Closed");
+        } catch (Exception e) {
+            //
+        }
+    }
+
+    public void closeRateUsPopup()
+    {
 //        try {
 //            Helper.waitForPresent(driver, rateUsPopupCloseLocator);
 //            driver.findElement(rateUsPopupCloseLocator).click();

@@ -64,6 +64,22 @@ public class Helper {
         touchAction.press(centerX, bottomY).moveTo(centerX, topY).release().perform();
     }
 
+    public static void swipeDownScreen(AndroidDriver driver) throws InterruptedException
+    {
+        Dimension windowSize = driver.manage().window().getSize();
+
+        int x = (int) (windowSize.width * 0.5);
+
+        int y1 = (int) (windowSize.height * 0.5);
+        int y2 = (int) (windowSize.height * 0.25);
+
+        System.out.println(y1);
+        System.out.println(y2);
+
+        TouchAction touchAction = new TouchAction(driver);
+        touchAction.press(x, y1).moveTo(0, y2).release().perform();
+    }
+
     public static void swipeUpElement(TouchAction touchAction, AndroidDriver driver, AndroidElement element, int duration)
     {
         int topY = element.getLocation().getY();

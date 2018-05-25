@@ -10,7 +10,8 @@ import java.util.Set;
 /**
  * Created by aatayants on 12/6/2016.
  */
-public class MainMenu extends AndroidSettings {
+public class MainMenu extends AndroidSettings
+{
     private AndroidDriver driver;
 
     public MainMenu(AndroidDriver driver)
@@ -20,7 +21,7 @@ public class MainMenu extends AndroidSettings {
 
     // Element locators
 
-    By mainMenuButtonLocator = By.xpath("//android.widget.ImageButton[@content-desc='DrawOpen']");
+    By drawerMenuButtonLocator = By.xpath("//android.widget.ImageButton[@content-desc='DrawOpen']");
 
     By folderDropDownLocator = By.xpath("//android.widget.Spinner[@resource-id='com.youmail.android.vvm:id/folder_spinner']");
 
@@ -30,29 +31,20 @@ public class MainMenu extends AndroidSettings {
 
     By mainMenuBackButtonLocator = By.xpath("//android.widget.ImageButton[@content-desc='Navigate up']");
 
+    public void openMenu()
+    {
+        Helper.waitForPresent(driver, drawerMenuButtonLocator);
+        driver.findElement(drawerMenuButtonLocator).click();
+    }
+
     public void closeMenu()
     {
 //        Helper.swipeRightToLeft(driver);
     }
 
-    public void getUrl()
+    public void openFolderDropDown()
     {
-        Set<String> contextHandlers = driver.getContextHandles();
-        while (contextHandlers.size() < 2) {
-            contextHandlers = driver.getContextHandles();
-            System.out.println(contextHandlers);
-        }
-        for (String context : contextHandlers) {
-            System.out.println("---context---" + context);
-            if (context.contains("WEB")) {
-                driver.context(context);
-                driver.switchTo().window(context);
-            }
-        }
-
-
-
-//        System.out.println(driver.getCurrentUrl());
-//        System.out.println(driver.getPageSource());
+        Helper.waitForPresent(driver, folderDropDownLocator);
+        driver.findElement(folderDropDownLocator).click();
     }
 }

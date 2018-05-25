@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="YouMail - Android Messages Tests">
+    <!--<test name="Messages: Dismiss Tutorial" preserve-order="true">-->
+        <!--<classes>-->
+            <!--<class name="tests.MessagesTest">-->
+                <!--<methods>-->
+                    <!--<include name="dismissTutorial"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
     <test name="Messages: Open Save Folder" preserve-order="true">
         <classes>
             <class name="tests.MessagesTest">
@@ -40,15 +49,15 @@
             <!--</class>-->
         <!--</classes>-->
     <!--</test>-->
-    <test name="Messages: Load More messages" preserve-order="true">
-        <classes>
-            <class name="tests.MessagesTest">
-                <methods>
-                    <include name="loadMoreMessages"></include>
-                </methods>
-            </class>
-        </classes>
-    </test>
+    <!--<test name="Messages: Load More messages" preserve-order="true">-->
+        <!--<classes>-->
+            <!--<class name="tests.MessagesTest">-->
+                <!--<methods>-->
+                    <!--<include name="loadMoreMessages"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
     <test name="Messages: Play message" preserve-order="true">
         <classes>
             <class name="tests.MessagesTest">
@@ -69,16 +78,6 @@
             </class>
         </classes>
     </test>
-    <test name="Messages: Text sender" preserve-order="true">
-        <classes>
-            <class name="tests.MessagesTest">
-                <methods>
-                    <include name="openMessage"></include>
-                    <include name="textSender"></include>
-                </methods>
-            </class>
-        </classes>
-    </test>
     <test name="Messages: Forward message" preserve-order="true">
         <classes>
             <class name="tests.MessagesTest">
@@ -89,15 +88,15 @@
             </class>
         </classes>
     </test>
-    <test name="Messages: Ditch sender" preserve-order="true">
-        <classes>
-            <class name="tests.MessagesTest">
-                <methods>
-                    <include name="openMessage"></include>
-                    <include name="ditchSender"></include>
-                </methods>
-            </class>
-        </classes>
-    </test>
+    <!--<test name="Messages: Ditch sender" preserve-order="true">-->
+        <!--<classes>-->
+            <!--<class name="tests.MessagesTest">-->
+                <!--<methods>-->
+                    <!--<include name="openMessage"></include>-->
+                    <!--<include name="ditchSender"></include>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
 
 </suite>
