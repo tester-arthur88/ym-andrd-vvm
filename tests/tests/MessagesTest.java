@@ -166,7 +166,6 @@ public class MessagesTest extends AndroidSettings
         messagesScreen.callSender();
 
         messagesScreen.openFirstMessage();
-        messagesScreen.textSender();
         messagesScreen.openFirstMessage();
 //        messagesScreen.forwardMessage();
         messagesScreen.openFirstMessage();
