@@ -49,6 +49,13 @@ public class SignUpTest extends AndroidSettings
         signUpScreen.checkAgree();
         signUpScreen.clickCreateAccount();
 
+        ActivationScreen activationScreen = new ActivationScreen(driver);
+
+        activationScreen.clickActivate();
+        activationScreen.performTestCall();
+
+        activationScreen.goToInbox();
+
         Thread.sleep(7000);
     }
 }

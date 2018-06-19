@@ -105,6 +105,8 @@ public class MessagesScreen
 
     By shareButtonLocator = By.xpath("//android.widget.ImageButton[@resource-id='com.youmail.android.vvm:id/share_button']");
 
+    By urlBarLocator = By.xpath("//android.widget.EditText[@resource-id='com.android.chrome:id/url_bar']");
+
     /*Message Details Ending*/
 
     /*Auto-Play Popup Beginning*/
@@ -200,9 +202,13 @@ public class MessagesScreen
 //        System.out.println("Sender Unblocked");
     }
 
-    public void replySender()
+    public void replySender() throws InterruptedException
     {
+        Helper.waitForPresent(driver, replyButtonLocator);
+        driver.findElement(replyButtonLocator).click();
 
+        Thread.sleep(3000);
+        Helper.adbPressBack();
     }
     /*Message Details Operations Ending*/
 

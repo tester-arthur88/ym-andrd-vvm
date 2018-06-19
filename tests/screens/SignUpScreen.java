@@ -47,7 +47,7 @@ public class SignUpScreen
 
     By createAccountButtonLocator = By.xpath("//android.widget.Button[@resource-id='com.youmail.android.vvm:id/primary_btn']");
 
-    By activationScreenTitleLocator = By.xpath("android.widget.TextView[@text='Activation']");
+    By activationScreenTitleLocator = By.xpath("//android.widget.Button[@text='ACTIVATE']");
 
     public void allowPermissions()
     {
@@ -59,6 +59,7 @@ public class SignUpScreen
 
     public void typePhone(String phoneNumber)
     {
+        Helper.waitForPresent(driver, phoneInputLocator);
         driver.findElement(phoneInputLocator).clear();
         driver.findElement(phoneInputLocator).sendKeys(phoneNumber);
 
