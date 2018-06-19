@@ -67,7 +67,7 @@ public class ActivationScreen
             try
             {
                 System.out.println("Trying to close popup" + i + " time");
-                Helper.waitForPresent(driver, callForwardingSuccessLocator);
+                Helper.waitForPresentLong(driver, callForwardingSuccessLocator);
                 driver.findElement(callForwardingSuccessLocator);
                 driver.findElement(callForwardingPopupDismissLocator).click();
             }
