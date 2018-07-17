@@ -60,7 +60,7 @@ public class ActivationScreen
         System.out.println("Activation Screen Finished");
     }
 
-    public void performTestCall()
+    public void performTestCallAfterSignUp()
     {
         for (int i = 0; i <= 5; i++)
         {
@@ -75,16 +75,9 @@ public class ActivationScreen
             {
                 driver.findElement(verifyButtonLocator).click();
                 Helper.waitForPresentLong(driver, doneButtonLocator);
-                driver.findElement(doneButtonLocator).click();
+                driver.findElement(goToInboxButtonLocator).click();
                 System.out.println("Test Call successful");
             }
         }
-    }
-
-    public void goToInbox() throws InterruptedException
-    {
-        Helper.waitForPresent(driver, goToInboxButtonLocator);
-        driver.findElement(goToInboxButtonLocator).click();
-        Thread.sleep(7000);
     }
 }

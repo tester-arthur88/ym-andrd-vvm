@@ -12,7 +12,7 @@ public class ActivationTest extends AndroidSettings
         ActivationScreen activationScreen = new ActivationScreen(driver);
 
         activationScreen.clickActivate();
-        activationScreen.performTestCall();
+        activationScreen.performTestCallAfterSignUp();
 
         Thread.sleep(7000);
     }
